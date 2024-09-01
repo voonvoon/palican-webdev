@@ -21,7 +21,7 @@ export default async function Home() {
 
         <div className="mt-5 grid md:grid-cols-2 lg:grid-cols-3 gap-8 p-4">
           {projects.map((project) => (
-            <Link href={`/projects/${project.slug}`}>
+            <Link href={`/projects/${project.slug}`} key={project._id}>
             <div
               key={project._id}
               className="group relative flex flex-col items-stretch hover:scale-105 transition cursor-pointer"
