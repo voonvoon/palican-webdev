@@ -2,6 +2,8 @@ import Image from "next/image";
 import { getProjects } from "@/sanity/sanity-utils";
 import Link from "next/link";
 
+export const revalidate = 0; // Ensure the page does not cache
+
 export default async function Home() {
   const projects = await getProjects();
 

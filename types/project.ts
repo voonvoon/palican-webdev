@@ -9,5 +9,6 @@ export type Project = {
     url: string;
     alt:string;
     content: PortableTextBlock[]; // string, img etc...
+   
 
 }
