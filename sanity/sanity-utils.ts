@@ -3,25 +3,22 @@ import { createClient, groq } from "next-sanity";
 import clientConfig from "@/sanity/config/client-config";
 import { Page } from "@/types/Page";
 
-export async function getProjects(): Promise<Project[]> {
-  // const client = createClient({
-  //   projectId: "zm1bbp7g",
-  //   dataset: "production",
-  //   apiVersion: "2024-08-30",
-  // });
 
+export async function getProjects(start = 0, limit = 3): Promise<Project[]> {
+  // Update the GROQ query to limit results and start from a specific index
   return createClient(clientConfig).fetch(
-    groq`*[_type ==  'project']{
+    groq`*[_type == 'project'] | order(_createdAt desc) [${start}...${start + limit}] {
         _id,
         _createdAt,
         name,
-        "slug":slug.current,
+        "slug": slug.current,
         "image": image.asset->url,
         url,
         content
     }`
   );
 }
+
 
 export async function getProject(slug: string): Promise<Project> {
   // const client = createClient({
