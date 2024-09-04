@@ -12,3 +12,15 @@ export type Project = {
    
 
 }
+
+export type Blog = {
+    _id: string;
+    _createAt: Date;
+    title: string;
+    slug: string;
+    image: string;
+    alt:string;
+    content: PortableTextBlock[]; // string, img etc...
+   
+
+}

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { getProjects } from "@/sanity/sanity-utils";
+import { getBlogs } from "@/sanity/sanity-utils";
 import Link from "next/link";
 import PaginationControl from "./components/PaginationControl";
 
@@ -25,25 +26,31 @@ export default async function Home({
     ? projects.slice(0, itemsPerPage)
     : projects;
 
+  //blogs
+  const blogs = await getBlogs();
+
   return (
     <div className="p-8">
-      <div className="text-5xl font-extrabold p-10">
+      <div className="text-5xl font-extrabold pt-16 pb-16 pl-8">
         Welcome to{" "}
-        <span className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent">
+        <span className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent animate-fadeIn">
           Pelican Webdev
         </span>
       </div>
-      <p className="mt-3 text-xl text-gray-600 p-8">
-        Aloha everyone! Check out my projects!
+
+      <p className="text-lg text-gray-600 pl-8">Aloha everyone!</p>
+
+      <p className="text-sm text-gray-400 pl-8">
+        specializing in e-commerce solutions!
       </p>
-      <h2 className="mt-24 font-bold text-gray-700 text-3xl ml-10">
+      <h2 className="mt-12 font-bold text-gray-700 text-3xl ml-10">
         My Projects
       </h2>
 
-      <div className="mt-5 grid md:grid-cols-2 lg:grid-cols-3 gap-8 p-8">
+      <div className="mt-5 grid md:grid-cols-2 lg:grid-cols-3 gap-8 p-4 mb-32 ">
         {displayedProjects.map((project) => (
           <Link href={`/projects/${project.slug}`} key={project._id}>
-            <div className="group relative flex flex-col items-stretch hover:scale-105 transition cursor-pointer">
+            <div className="group relative flex flex-col items-stretch hover:scale-105 transition cursor-pointer shadow-md p-2">
               <div className="w-full h-64 overflow-hidden rounded-md bg-gray-200 flex-shrink-0 group-hover:opacity-75">
                 {project.image && (
                   <Image
@@ -71,8 +78,77 @@ export default async function Home({
           </Link>
         ))}
       </div>
-
       <PaginationControl currentPage={currentPage} hasNextPage={hasNextPage} />
+
+      <br />
+      <hr />
+
+      <h2 className="mt-12 font-bold text-gray-700 text-3xl ml-10">My Blogs</h2>
+
+      {/* <div className="mt-5 grid md:grid-cols-4 lg:grid-cols-5 gap-8 p-4 mb-32 scroll">
+        {blogs.map((blog) => (
+          <Link href={`/blogs/${blog?.slug}`} key={blog._id}>
+            <div className="group relative flex flex-col items-stretch hover:scale-105 transition cursor-pointer shadow-md p-1 ">
+              <div className="w-full h-64 overflow-hidden rounded-md bg-gray-200 flex-shrink-0 group-hover:opacity-75">
+                {blog.image && (
+                  <Image
+                    src={blog.image}
+                    alt={blog.alt || "Project Image"}
+                    width={750}
+                    height={300}
+                    className="w-full h-full object-cover"
+                  />
+                )}
+              </div>
+
+              <div className="mt-4 flex justify-between flex-grow">
+                <div>
+                  <h3 className="text-sm text-gray-700">
+                    <span
+                      aria-hidden="true"
+                      className="absolute inset-0"
+                    ></span>
+                    {blog?.title}
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </Link>
+        ))}
+      </div> */}
+      <div className="mt-5 overflow-x-auto pb-4">
+        <div className="inline-grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 p-4">
+          {blogs.map((blog) => (
+            <Link href={`/blogs/${blog?.slug}`} key={blog._id}>
+              <div className="group relative flex flex-col items-stretch hover:scale-105 transition cursor-pointer shadow-md p-1">
+                <div className="w-full h-35 overflow-hidden rounded-md bg-gray-200 flex-shrink-0 group-hover:opacity-75">
+                  {blog.image && (
+                    <Image
+                      src={blog.image}
+                      alt={blog.alt || "Project Image"}
+                      width={750}
+                      height={300}
+                      className="w-full h-full object-cover"
+                    />
+                  )}
+                </div>
+
+                <div className="mt-4 flex justify-between flex-grow">
+                  <div>
+                    <h3 className="text-sm text-gray-700">
+                      <span
+                        aria-hidden="true"
+                        className="absolute inset-0"
+                      ></span>
+                      {blog?.title}
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

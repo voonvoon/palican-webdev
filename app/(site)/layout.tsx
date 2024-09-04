@@ -46,7 +46,7 @@ export default async function RootLayout({
         </header>
 
         {/* Main content area with flex-grow to take up available space */}
-        <main className="flex-grow py-20">{children}</main>
+        <main className="flex-grow py-5">{children}</main>
 
         <Footer />
       </body>
