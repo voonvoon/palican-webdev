@@ -3,6 +3,7 @@ import { getProjects } from "@/sanity/sanity-utils";
 import { getBlogs } from "@/sanity/sanity-utils";
 import Link from "next/link";
 import PaginationControl from "./components/PaginationControl";
+import Plan from "./components/Plan";
 
 export const revalidate = 0; // Disable caching
 
@@ -41,13 +42,13 @@ export default async function Home({
       <p className="text-lg text-gray-600 pl-8">Aloha everyone!</p>
 
       <p className="text-sm text-gray-400 pl-8">
-        specializing in e-commerce solutions!
+        I specialize in building e-commerce solutions, delivering tailored websites for businesses and individuals. My expertise extends to creating custom personal and company websites, ensuring a professional and engaging online presence.
       </p>
       <h2 className="mt-12 font-bold text-gray-700 text-3xl ml-10">
         My Projects
       </h2>
 
-      <div className="mt-5 grid md:grid-cols-2 lg:grid-cols-3 gap-8 p-4 mb-32 ">
+      <div className="mt-5 grid md:grid-cols-2 lg:grid-cols-3 gap-8 p-4 mb-16 ">
         {displayedProjects.map((project) => (
           <Link href={`/projects/${project.slug}`} key={project._id}>
             <div className="group relative flex flex-col items-stretch hover:scale-105 transition cursor-pointer shadow-md p-2">
@@ -80,10 +81,14 @@ export default async function Home({
       </div>
       <PaginationControl currentPage={currentPage} hasNextPage={hasNextPage} />
 
-      <br />
-      <hr />
 
-      <h2 className="mt-12 font-bold text-gray-700 text-3xl ml-10">My Blogs</h2>
+      <h2 className="mt-12 font-bold text-gray-700 text-3xl ml-10 text-center">
+        My Services
+      </h2>
+
+      <Plan />
+
+      <h2 className="mt-12 font-bold text-gray-700 text-3xl ml-10 text-center">My Blogs</h2>
 
       {/* <div className="mt-5 grid md:grid-cols-4 lg:grid-cols-5 gap-8 p-4 mb-32 scroll">
         {blogs.map((blog) => (
