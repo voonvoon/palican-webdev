@@ -19,3 +19,34 @@
   }
   
 
+  /* hide scroll bar */
+
+  /* Custom class to hide scrollbars */
+/* Custom class for a modern, slick scrollbar */
+
+
+/* Chrome, Safari, Edge */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 2px; /* Width of the scrollbar */
+  height: 2px; /* Height of the scrollbar if horizontal */
+}
+
+/* for firefox */
+/* .custom-scrollbar {
+  scrollbar-width: thin; 
+  scrollbar-color: #d1d5db #f3f4f6; 
+} */
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #9ca3af; /* Color of the thumb */
+  border-radius: 4px; /* Roundness of the thumb */
+  border: 2px solid #f3f4f6; /* Adds padding around thumb, matches track color */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f3f4f6; /* Track color */
+  border-radius: 4px; /* Roundness of the track */
+}
+
+
+

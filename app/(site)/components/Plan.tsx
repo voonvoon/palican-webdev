@@ -27,7 +27,7 @@ const Plan = () => {
         "Admin Dashboard",
         "Products CRM system",
         "Coupon Discount System",
-        "Order Management System"
+        "Order Management System",
       ],
       price: "RM4500 ++",
     },
@@ -40,7 +40,7 @@ const Plan = () => {
         "Social Media Intergration",
         "Whatsapp Intergration",
         "Write up include",
-        "Annual Mantenence",
+        "Content management system",
         "Domain",
       ],
       price: "RM1980",
@@ -54,6 +54,7 @@ const Plan = () => {
         "Social Media Intergration",
         "Whatsapp Intergration",
         "Domain",
+        "Content management system",
       ],
       price: "RM980",
     },
@@ -69,7 +70,7 @@ const Plan = () => {
       >
         {plans.map((plan, index) => (
           <SwiperSlide key={index}>
-            <div className=" bg-gradient-to-br from-white to-gray-50 p-8 mb-8 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 border border-gray-200 flex flex-col items-center text-center">
+            <div className="bg-gradient-to-br from-white to-gray-50 p-8 mb-8 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 border border-gray-200 flex flex-col items-center text-center h-[32rem]">
               <h3 className="text-2xl font-bold bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent">
                 {plan.title}
               </h3>
@@ -77,7 +78,9 @@ const Plan = () => {
                 {plan.description}
               </h4>
 
-              <ul className="mb-6 space-y-2 m-8">
+              <ul className="mb-6 space-y-2 m-8 overflow-y-auto h-96 custom-scrollbar p-8">
+                {" "}
+                {/* Apply the custom class */}
                 {plan.features.map((feature, i) => (
                   <li
                     key={i}

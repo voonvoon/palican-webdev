@@ -14,8 +14,8 @@ export default async function Blog({ params }: Props) {
   return (
     <div className="p-1">
       <header className="flex item-center justify-between">
-        <h1 className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent text-4xl font-extrabold drop-shadow p-2 max-[400px]:text-2xl">
-          {blog.title}
+        <h1 className=" text-2xl font-bold drop-shadow p-2 max-[400px]:text-2xl">
+          {blog.title.toUpperCase()}
         </h1>
       </header>
 
