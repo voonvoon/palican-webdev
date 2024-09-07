@@ -44,7 +44,7 @@ const ChatBox = () => {
             <>
               <div className="flex items-center justify-between">
                 {" "}
-                Let's chat..! <RiCustomerService2Fill size={20} />
+                Let&apos;s chat..! <RiCustomerService2Fill size={20} />
               </div>
             </>
           )}
