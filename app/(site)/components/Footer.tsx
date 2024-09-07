@@ -21,7 +21,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="about" className="hover:text-gray-400">
+                <a href="#my-services" className="hover:text-gray-400">
                   Services
                 </a>
               </li>
@@ -36,14 +36,26 @@ const Footer = () => {
           <div className="flex flex-col items-center mb-4 md:mb-0">
             <h2 className="text-lg font-semibold mb-2">Follow Us</h2>
             <div className="flex space-x-4">
-              <a href="#" className="hover:text-gray-400">
-                <FaFacebookSquare size={25}/>
+              <a
+                href="https://www.facebook.com/profile.php?id=61556867218687"
+                target="_blank"
+                className="hover:text-gray-400"
+              >
+                <FaFacebookSquare size={25} />
               </a>
-              <a href="#" className="hover:text-gray-400">
-                <FaInstagram size={25}/>
+              <a
+                href="https://www.facebook.com/profile.php?id=61556867218687"
+                target="_blank"
+                className="hover:text-gray-400"
+              >
+                <FaInstagram size={25} />
               </a>
-              <a href="#" className="hover:text-gray-400">
-               <FaLinkedin size={25}/>
+              <a
+                href="https://www.facebook.com/profile.php?id=61556867218687"
+                target="_blank"
+                className="hover:text-gray-400"
+              >
+                <FaLinkedin size={25} />
               </a>
             </div>
           </div>

@@ -49,4 +49,6 @@
 }
 
 
-
+html {
+  scroll-behavior: smooth;
+}

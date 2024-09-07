@@ -5,6 +5,7 @@ import "../globals.css";
 import Link from "next/link";
 import { getPages } from "@/sanity/sanity-utils";
 import Footer from "./components/Footer"; // Assuming Footer component is in the components folder
+import ChatBox from "./components/ChatBox";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -47,6 +48,7 @@ export default async function RootLayout({
 
         {/* Main content area with flex-grow to take up available space */}
         <main className="flex-grow py-5">{children}</main>
+        <ChatBox />
 
         <Footer />
       </body>

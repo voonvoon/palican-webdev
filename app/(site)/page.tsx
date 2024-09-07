@@ -88,7 +88,7 @@ export default async function Home({
 
       <PaginationControl currentPage={currentPage} hasNextPage={hasNextPage} />
 
-      <h2 className="mt-12 font-bold text-gray-700 text-3xl text-center">
+      <h2 id="my-services" className="mt-12 font-bold text-gray-700 text-3xl text-center">
         My Services
       </h2>
 
