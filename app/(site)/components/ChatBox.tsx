@@ -10,7 +10,7 @@ const ChatBox = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [message, setMessage] = useState("");
 
-  const now = moment().format('LLL');
+  const now = moment().format("LLL");
 
   // Function to send the message to WhatsApp
   const sendMessage = () => {
@@ -33,20 +33,18 @@ const ChatBox = () => {
       onClick={() => !isOpen && setIsOpen(true)}
     >
       <div className="flex items-center justify-between p-4 h-12 bg-gray-700 rounded-t-lg">
-        <span className="">
+        <span className="w-full">
           {isOpen ? (
             <div className="flex items-center justify-between">
               {" "}
-              Welcome to chat..! {"   "}
+              Welcome to chat.. {"   "}
               <MdChat size={20} />
             </div>
           ) : (
-            <>
-              <div className="flex items-center justify-between">
-                {" "}
-                Let&apos;s chat..! <RiCustomerService2Fill size={20} />
-              </div>
-            </>
+            <div className="flex items-center justify-between">
+              {" "}
+              Let&apos;s chat..! <RiCustomerService2Fill size={20} />
+            </div>
           )}
         </span>
         {isOpen && (
@@ -60,7 +58,9 @@ const ChatBox = () => {
       </div>
       {isOpen && (
         <div className="flex-1 flex flex-col p-2">
-          <div className="text-white-600 text-xs flex items-center justify-start mb-1">{now}</div>
+          <div className="text-white-600 text-xs flex items-center justify-start mb-1">
+            {now}
+          </div>
           <textarea
             className="flex-1 p-2 bg-gray-700 text-white rounded-md resize-none focus:outline-none"
             placeholder="Ask Pelican Webdev anything...."

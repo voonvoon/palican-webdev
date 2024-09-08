@@ -18,7 +18,7 @@ const Plan = () => {
         "Payment Gateway",
         "Fully Own Source Code",
         "Social Media Intergration",
-        "Whatsapp Intergration",
+        "Live Chat Whatsapp Intergration",,
         "Authentication(User Login e.g Google)",
         "Automated Email",
         "Similar Product Recommendation",
@@ -28,35 +28,49 @@ const Plan = () => {
         "Products CRM system",
         "Coupon Discount System",
         "Order Management System",
+        "Domain & Hosting & SSL(free 1 year)",
+        "Mobile Responsive",
+        "Image Optimization(Cloudinary)",
+        "Ultra-Speedy with Next.js"
       ],
-      price: "RM4500 ++",
+      priceBefore: "RM5500",
+      price: "RM4800 ++",
     },
     {
       title: "Company/Corporate",
       description: "SMEs, Corporate and Other Company",
       features: [
         "5-10 Dynamic pages",
-        "Free Hosting & SSL",
         "Social Media Intergration",
-        "Whatsapp Intergration",
-        "Write up include",
+        "Live Chat Whatsapp Intergration",,
         "Content management system",
-        "Domain",
+        "Domain & Hosting & SSL(free 1 year)",
+        "Mobile Responsive",
+        "Image Optimization(Cloudinary)",
+         "Ultra-Speedy with Next.js",
+         "SEO App Friendly",
+        
       ],
-      price: "RM1980",
+      priceBefore: "RM3500",
+      price: "RM2480",
     },
     {
       title: "Personal",
       description: "For Self-employed, Enterprenuers, Start-up & Landing Page",
       features: [
+        "1-2 Dynamic pages Or 1 page website",
         "Complete Web Design",
-        "Free Hosting & SSL",
         "Social Media Intergration",
-        "Whatsapp Intergration",
-        "Domain",
+        "Live Chat Whatsapp Intergration",
+        "Domain & Hosting & SSL(free 1 year)",
         "Content management system",
+        "Mobile Responsive",
+        "Image Optimization(Cloudinary)",
+         "Ultra-Speedy with Next.js",
+         "SEO App Friendly",
       ],
-      price: "RM980",
+      priceBefore: "RM1600",
+      price: "RM1250",
     },
   ];
 
@@ -91,6 +105,9 @@ const Plan = () => {
                   </li>
                 ))}
               </ul>
+              <p className="line-through text-sm text-gray-500">
+                {plan.priceBefore}
+              </p>
 
               <p className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent animate-fadeIn text-lg font-bold">
                 {plan.price}

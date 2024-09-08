@@ -31,11 +31,11 @@ export default async function RootLayout({
         <header className="flex items-center justify-between p-4 bg-gray-100 shadow-lg">
           <Link
             href="/"
-            className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent text-lg font-bold"
+            className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent text-lg font-bold logo-animation"
           >
             Pelican Webdev
           </Link>
-          <div className="flex items-center gap-3 text-sm text-gray-600 p-4 sm:text-lg">
+          <div className="flex items-center gap-3 text-sm text-gray-600 p-4 sm:text-lg ">
             {pages.map((page) => (
               <Link
                 href={`/${page.slug}`}
