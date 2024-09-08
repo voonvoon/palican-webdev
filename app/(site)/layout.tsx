@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   title: "Pelican Webdev",
   description:
     "Full-stack web developer specializing in e-commerce solutions using Next.js, Node.js, and MongoDB. Helping businesses build fast, scalable, and user-friendly websites.",
+    icons: {
+      icon: "/Pelican_logo.png", // Add this line for the favicon
+    },
 };
 
 export default async function RootLayout({
