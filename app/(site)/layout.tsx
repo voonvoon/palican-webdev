@@ -43,6 +43,16 @@ export default async function RootLayout({
             `,
           }}
         />
+
+        {/* <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10927177282">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-10927177282');
+</script> */}
       </Head>
       <body className="flex flex-col min-h-screen">
         <header className="flex items-center justify-between p-4 bg-gray-100 shadow-lg">

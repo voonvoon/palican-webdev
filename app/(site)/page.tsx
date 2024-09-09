@@ -7,6 +7,7 @@ import Plan from "./components/Plan";
 import Blog from "./components/Blog";
 import Projects from "./components/Projects";
 import Jumbotron from "./components/Jumbotron";
+import Head from "next/head";
 
 export const revalidate = 0; // Disable caching
 
@@ -34,26 +35,48 @@ export default async function Home({
   const blogs = await getBlogs();
 
   return (
-    <div className="p-8">
-      <div className="text-5xl font-extrabold pt-16 pb-16 pl-8">
-        Welcome to{" "}
-        <span className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent animate-fadeIn">
-          Pelican Webdev
-        </span>
-      </div>
+    <>
+      {" "}
+      <Head>
+        {/* Google Tag (gtag.js) */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-10927177282"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-10927177282');
+        `,
+          }}
+        />
+      </Head>
+      <div className="p-8">
+        <div className="text-5xl font-extrabold pt-16 pb-16 pl-8">
+          Welcome to{" "}
+          <span className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent animate-fadeIn">
+            Pelican Webdev
+          </span>
+        </div>
 
-      <div className="text-lg text-gray-600 pl-8">
-        <Jumbotron text={["Aloha everyone!"]} />
-      </div>
+        <div className="text-lg text-gray-600 pl-8">
+          <Jumbotron text={["Aloha everyone!"]} />
+        </div>
 
-      <p className="text-sm text-gray-400 pl-8 animate-fadeIn">
-      I specialize in building e-commerce solutions, delivering tailored websites for businesses and individuals. My expertise extends to creating custom personal and company websites, ensuring a professional and engaging online presence.
-      </p>
-      <h2 className="mt-12 font-bold text-gray-700 text-3xl ml-10">
-        My Projects
-      </h2>
+        <p className="text-sm text-gray-400 pl-8 animate-fadeIn">
+          I specialize in building e-commerce solutions, delivering tailored
+          websites for businesses and individuals. My expertise extends to
+          creating custom personal and company websites, ensuring a professional
+          and engaging online presence.
+        </p>
+        <h2 className="mt-12 font-bold text-gray-700 text-3xl ml-10">
+          My Projects
+        </h2>
 
-      {/* <div className="mt-5 grid md:grid-cols-2 lg:grid-cols-3 gap-8 p-4 mb-16 ">
+        {/* <div className="mt-5 grid md:grid-cols-2 lg:grid-cols-3 gap-8 p-4 mb-16 ">
         {displayedProjects.map((project) => (
           <Link href={`/projects/${project.slug}`} key={project._id}>
             <div className="group relative flex flex-col items-stretch hover:scale-105 transition cursor-pointer shadow-md p-2">
@@ -84,24 +107,28 @@ export default async function Home({
           </Link>
         ))}
       </div> */}
-      <Projects displayedProjects={displayedProjects} />
+        <Projects displayedProjects={displayedProjects} />
 
-      <PaginationControl currentPage={currentPage} hasNextPage={hasNextPage} />
+        <PaginationControl
+          currentPage={currentPage}
+          hasNextPage={hasNextPage}
+        />
 
-      <h2
-        id="my-services"
-        className="mt-12 font-bold text-gray-700 text-3xl text-center"
-      >
-        My Services
-      </h2>
+        <h2
+          id="my-services"
+          className="mt-12 font-bold text-gray-700 text-3xl text-center"
+        >
+          My Services
+        </h2>
 
-      <Plan />
+        <Plan />
 
-      <h2 className="mt-12 font-bold text-gray-700 text-3xl text-center">
-        My Blogs
-      </h2>
+        <h2 className="mt-12 font-bold text-gray-700 text-3xl text-center">
+          My Blogs
+        </h2>
 
-      <Blog blogs={blogs} />
-    </div>
+        <Blog blogs={blogs} />
+      </div>
+    </>
   );
 }
