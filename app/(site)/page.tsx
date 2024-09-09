@@ -6,6 +6,7 @@ import PaginationControl from "./components/PaginationControl";
 import Plan from "./components/Plan";
 import Blog from "./components/Blog";
 import Projects from "./components/Projects";
+import Jumbotron from "./components/Jumbotron";
 
 export const revalidate = 0; // Disable caching
 
@@ -41,13 +42,12 @@ export default async function Home({
         </span>
       </div>
 
-      <p className="text-lg text-gray-600 pl-8">Aloha everyone!</p>
+      <div className="text-lg text-gray-600 pl-8">
+        <Jumbotron text={["Aloha everyone!"]} />
+      </div>
 
-      <p className="text-sm text-gray-400 pl-8">
-        I specialize in building e-commerce solutions, delivering tailored
-        websites for businesses and individuals. My expertise extends to
-        creating custom personal and company websites, ensuring a professional
-        and engaging online presence.
+      <p className="text-sm text-gray-400 pl-8 animate-fadeIn">
+      I specialize in building e-commerce solutions, delivering tailored websites for businesses and individuals. My expertise extends to creating custom personal and company websites, ensuring a professional and engaging online presence.
       </p>
       <h2 className="mt-12 font-bold text-gray-700 text-3xl ml-10">
         My Projects
@@ -88,7 +88,10 @@ export default async function Home({
 
       <PaginationControl currentPage={currentPage} hasNextPage={hasNextPage} />
 
-      <h2 id="my-services" className="mt-12 font-bold text-gray-700 text-3xl text-center">
+      <h2
+        id="my-services"
+        className="mt-12 font-bold text-gray-700 text-3xl text-center"
+      >
         My Services
       </h2>
 
