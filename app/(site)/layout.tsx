@@ -1,4 +1,3 @@
-
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../globals.css";
@@ -6,6 +5,7 @@ import Link from "next/link";
 import { getPages } from "@/sanity/sanity-utils";
 import Footer from "./components/Footer"; // Assuming Footer component is in the components folder
 import ChatBox from "./components/ChatBox";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,9 +13,9 @@ export const metadata: Metadata = {
   title: "Pelican Webdev",
   description:
     "Full-stack web developer specializing in e-commerce solutions using Next.js, Node.js, and MongoDB. Helping businesses build fast, scalable, and user-friendly websites.",
-    icons: {
-      icon: "/Pelican_logo.png", // Add this line for the favicon
-    },
+  icons: {
+    icon: "/Pelican_logo.png", // Add this line for the favicon
+  },
 };
 
 export default async function RootLayout({
@@ -27,6 +27,23 @@ export default async function RootLayout({
 
   return (
     <html lang="en" className="h-full">
+      <Head>
+        {/* Google Tag (gtag.js) */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-10927177282"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-10927177282');
+            `,
+          }}
+        />
+      </Head>
       <body className="flex flex-col min-h-screen">
         <header className="flex items-center justify-between p-4 bg-gray-100 shadow-lg">
           <Link
@@ -58,4 +75,3 @@ export default async function RootLayout({
     </html>
   );
 }
-
