@@ -1,10 +1,11 @@
-'use client'
+"use client";
 
 import Link from "next/link";
 
 const PaginationControl = ({ currentPage, hasNextPage }: any) => {
   // Custom smooth scroll function to make it slower
   function scrollToTop() {
+
     const targetPosition = 600; // Position to scroll to
     const startPosition = window.scrollY; // Current scroll position
     const distance = targetPosition - startPosition; // Distance to scroll

@@ -34,7 +34,7 @@ const Plan = () => {
         "Ultra-Speedy with Next.js"
       ],
       priceBefore: "RM5500",
-      price: "RM4800 ++",
+      price: "RM4500 ++",
     },
     {
       title: "Company/Corporate",
