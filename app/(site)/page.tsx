@@ -63,17 +63,20 @@ export default async function Home({
         </div>
 
         <div className="text-lg text-gray-600 pl-8">
-          <Jumbotron text={["Aloha everyone!"]} />
+          <Jumbotron
+            text={["Aloha everyone!", "Welcome to Palican Webdev...", "I specialize in developing e-commerce solutions"]}
+          />
         </div>
 
         <p className="text-sm text-gray-400 pl-8 animate-fadeIn">
-          I specialize in building e-commerce solutions, delivering tailored
-          websites for businesses and individuals. My expertise extends to
-          creating custom personal and company websites, ensuring a professional
-          and engaging online presence.
+          I specialize in developing e-commerce solutions, providing
+          custom-tailored online stores that meet the unique needs of businesses
+          and individuals. My expertise is focused on creating professional and
+          engaging e-commerce websites that elevate online presence and drive
+          results.
         </p>
         <h2 className="mt-12 font-bold text-gray-700 text-3xl ml-10">
-          My Projects
+          My Works
         </h2>
 
         {/* <div className="mt-5 grid md:grid-cols-2 lg:grid-cols-3 gap-8 p-4 mb-16 ">
@@ -118,7 +121,7 @@ export default async function Home({
           id="my-services"
           className="mt-12 font-bold text-gray-700 text-3xl text-center"
         >
-          My Services
+          Plans & Price
         </h2>
 
         <Plan />
