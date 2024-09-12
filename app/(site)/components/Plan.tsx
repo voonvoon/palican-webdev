@@ -53,32 +53,36 @@ const Plan = () => {
       description:
         "SMEs, Corporate and Other Company plan to create an E-commerce",
       features: [
-        { text: "No Monthly Subscription fee!" },
+        { text: "Similar Product Recommendation", highlight: true },
+        { text: "Coupon Discount System", highlight: true },
+        { text: "Auto Invoice generation", highlight: true },
         { text: "12 Pages Website", highlight: true },
-        { text: "Full E-commerce Website" },
-        { text: "Unlimited Products" },
         {
           text: "Product Filtering(categories/brand..)",
           highlight: true,
         },
+        { text: "No Monthly Subscription fee!" },
+
+        { text: "Full E-commerce Website" },
+        { text: "Unlimited Products" },
+
         { text: "Payment Gateway" },
         { text: "Fully Own Source Code" },
         { text: "Social Media Integration" },
         { text: "Live Chat Whatsapp Integration" },
         { text: "Authentication (User Login e.g., Google)" },
         { text: "Automated Email" },
-        { text: "Similar Product Recommendation", highlight: true },
+
         { text: "SEO App Friendly" },
         { text: "Cloud-based Database (MongoDB)" },
         { text: "Admin Dashboard" },
         { text: "Products CRM System" },
-        { text: "Coupon Discount System", highlight: true },
+
         { text: "Order Management System" },
         { text: "Domain & Hosting & SSL (free 1 year)" },
         { text: "Mobile Responsive" },
         { text: "Image Optimization (Cloudinary)" },
         { text: "Ultra-Speedy with Next.js" },
-        { text: "Auto Invoice generation", highlight: true },
       ],
       priceBefore: "RM6500",
       price: "RM4900",
@@ -102,22 +106,22 @@ const Plan = () => {
       >
         {plans.map((plan, index) => (
           <SwiperSlide key={index}>
-            <div className="relative bg-gradient-to-br from-white to-gray-50 p-2 pl-4 pr-4 mb-4 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 border border-gray-200 flex flex-col items-center text-center h-[32rem]">
+            <div className="relative bg-gradient-to-br from-white to-gray-50 p-2 pl-4 pr-4 mb-4 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 border border-gray-200 flex flex-col items-center text-center h-[40rem]">
               {/* Render ribbon for popular plans */}
               {plan.popular && (
-                <div className="absolute top-0 right-0 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-bl-lg">
+                <div className="absolute top-0 right-0 bg-red-500 text-white text-lg font-bold px-4 py-1 rounded-bl-lg">
                   Popular
                 </div>
               )}
 
-              <h3 className="text-2xl font-bold bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent">
+              <h3 className="mt-8 text-2xl font-bold bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent">
                 {plan.title}
               </h3>
-              <h4 className="text-xs text-gray-500 mb-0 mt-4 p-8 sm:text-sm">
+              <h4 className="text-xs text-gray-500 mb-0 mt-2 p-4 sm:text-sm">
                 {plan.description}
               </h4>
 
-              <ul className="mb-6 space-y-2 m-8 overflow-y-auto h-96 custom-scrollbar p-4">
+              <ul className="mb-6 space-y-2 m-8 overflow-y-auto h-auto custom-scrollbar p-4">
                 {plan.features.map((feature, i) => (
                   <li
                     key={i}

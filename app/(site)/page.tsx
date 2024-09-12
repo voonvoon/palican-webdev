@@ -8,6 +8,7 @@ import Blog from "./components/Blog";
 import Projects from "./components/Projects";
 import Jumbotron from "./components/Jumbotron";
 import Head from "next/head";
+import TechShowcase from "./components/TechShowcase";
 
 export const revalidate = 0; // Disable caching
 
@@ -64,7 +65,11 @@ export default async function Home({
 
         <div className="text-lg text-gray-600 pl-8">
           <Jumbotron
-            text={["Aloha everyone!", "Welcome to Palican Webdev...", "I specialize in developing e-commerce solutions"]}
+            text={[
+              "Aloha everyone!",
+              "Welcome to Palican Webdev...",
+              "I specialize in developing e-commerce solutions",
+            ]}
           />
         </div>
 
@@ -126,6 +131,7 @@ export default async function Home({
 
         <Plan />
 
+        <TechShowcase />
         <h2 className="mt-12 font-bold text-gray-700 text-3xl text-center">
           My Blogs
         </h2>

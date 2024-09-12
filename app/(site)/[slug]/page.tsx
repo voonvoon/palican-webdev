@@ -49,7 +49,7 @@ export default async function Page({ params }: Props) {
             className="rounded-lg border-1 shadow-2xl transition-transform transform hover:scale-105 hover:opacity-95"
           />
 
-          <div className="text-sm font-semibold font-serif text-gray-700 mt-5">
+          <div className="text-sm font-serif text-gray-700 mt-5">
             <Jumbotron
               text={[
                 "Welcome to Palican Webdev..",
