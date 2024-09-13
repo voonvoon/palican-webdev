@@ -6,6 +6,7 @@ import { getPages } from "@/sanity/sanity-utils";
 import Footer from "./components/Footer"; // Assuming Footer component is in the components folder
 import ChatBox from "./components/ChatBox";
 import Head from "next/head";
+//import Logo from "./components/logo";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -71,19 +72,19 @@ export default async function RootLayout({
         />
       </Head>
       <body className="flex flex-col min-h-screen">
-        <header className="flex items-center justify-between p-4 bg-gray-100 shadow-lg">
+        <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between p-4 bg-gray-800 shadow-xl">
           <Link
             href="/"
-            className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent text-lg font-bold logo-animation"
+            className="ml-3 bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent text-lg font-bold logo-animation"
           >
-            Pelican Webdev
+            Palican Webdev
           </Link>
           <div className="flex items-center gap-3 text-sm text-gray-600 p-4 sm:text-lg">
             {pages.map((page) => (
               <Link
                 href={`/${page.slug}`}
                 key={page._id}
-                className="relative inline-block text-gray-700 hover:text-blue-500"
+                className="relative inline-block text-white hover:text-blue-500"
               >
                 {page.title}
                 <span className="absolute left-0 bottom-0 w-full h-2 bg-red-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></span>
@@ -92,8 +93,10 @@ export default async function RootLayout({
           </div>
         </header>
 
+        
+
         {/* Main content area with flex-grow to take up available space */}
-        <main className="flex-grow py-5">{children}</main>
+        <main className="flex-grow py-5 pt-20">{children}</main>
         <ChatBox />
 
         <Footer />
