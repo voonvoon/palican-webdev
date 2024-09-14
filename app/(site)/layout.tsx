@@ -72,14 +72,14 @@ export default async function RootLayout({
         />
       </Head>
       <body className="flex flex-col min-h-screen">
-        <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between p-4 bg-gray-800 shadow-xl">
+        <header className="fixed top-0 left-0 right-0 z-50 flex items-end justify-between bg-gray-800 shadow-xl">
           <Link
             href="/"
-            className="ml-3 bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent text-lg font-bold logo-animation"
+            className=" p-1 ml-3 bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent text-lg font-bold logo-animation"
           >
             Palican Webdev
-          </Link>
-          <div className="flex items-center gap-3 text-sm text-gray-600 p-4 sm:text-lg">
+          </Link> 
+          <div className="flex items-center gap-3 text-sm text-gray-600 p-1 mr-1 sm:text-lg">
             {pages.map((page) => (
               <Link
                 href={`/${page.slug}`}
