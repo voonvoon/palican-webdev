@@ -51,7 +51,7 @@ const Footer = () => {
                 <FaInstagram size={25} />
               </a>
               <a
-                href="https://www.linkedin.com/in/hv-wong-2731a1329/?trk=opento_sprofile_details"
+                href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile"
                 target="_blank"
                 className="hover:text-gray-400"
               >
