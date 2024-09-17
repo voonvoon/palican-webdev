@@ -65,8 +65,8 @@ const Footer = () => {
             <p className="text-gray-400 text-xs sm:text-sm">
               A-16, Menara simfoni , Jln Simfoni2, Cheras 43300 Malaysia
             </p>
-            <p className="text-gray-400 text-sm">Email: hvlifeasy@gmail.com</p>
-            <p className="text-gray-400 text-sm">Phone: 018-3795728</p>
+            <p className="text-gray-400 text-xs sm:text-sm">Email: hvlifeasy@gmail.com</p>
+            <p className="text-gray-400 text-xs sm:text-sm">Phone: 018-3795728</p>
           </div>
         </div>
 
