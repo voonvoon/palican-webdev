@@ -51,7 +51,7 @@ const Footer = () => {
                 <FaInstagram size={25} />
               </a>
               <a
-                href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile"
+                href="https://www.linkedin.com/in/hv-wong-2731a1329/?trk=opento_sprofile_details"
                 target="_blank"
                 className="hover:text-gray-400"
               >
@@ -62,7 +62,7 @@ const Footer = () => {
 
           <div>
             <h2 className="text-lg font-semibold mb-2">Contact Us</h2>
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-400 text-xs sm:text-sm">
               A-16, Menara simfoni , Jln Simfoni2, Cheras 43300 Malaysia
             </p>
             <p className="text-gray-400 text-sm">Email: hvlifeasy@gmail.com</p>

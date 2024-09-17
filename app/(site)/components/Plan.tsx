@@ -146,7 +146,7 @@ const Plan = () => {
                   <p className="line-through text-sm text-gray-500">
                     {plan.priceBefore}
                   </p>
-                  <p className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent animate-fadeIn text-lg font-bold">
+                  <p className=" animate-fadeIn text-lg font-bold">
                     {plan.price}
                   </p>
                 </>

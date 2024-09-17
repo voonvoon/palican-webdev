@@ -79,7 +79,7 @@ export default async function RootLayout({
           >
             Palican Webdev
           </Link> 
-          <div className="flex items-center gap-3 text-sm text-gray-600 p-1 mr-1 sm:text-lg">
+          <div className="flex items-center gap-3 text-sm text-gray-600 p-1 mr-1 sm:text-base">
             {pages.map((page) => (
               <Link
                 href={`/${page.slug}`}
