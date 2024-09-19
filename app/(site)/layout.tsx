@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   description:
     "Full-stack web developer specializing in e-commerce solutions using Next.js, Node.js, and MongoDB. Helping businesses build fast, scalable, and user-friendly websites.",
   icons: {
-    icon: "/Pelican_logo.png", // Add this line for the favicon
+    icon: "/palican-logo.svg", // Add this line for the favicon
   },
 };
 
@@ -54,7 +54,7 @@ export default async function RootLayout({
               "@context": "http://schema.org",
               "@type": "Organization",
               url: "https://pelicanwebdev.com/", // Replace with your actual URL
-              logo: "https://pelicanwebdev.com/Pelican_logo.png", // Replace with the correct logo URL
+              logo: "https://pelicanwebdev.com/palican-logo.svg", // Replace with the correct logo URL
               name: "Pelican Webdev",
             }),
           }}
@@ -63,13 +63,13 @@ export default async function RootLayout({
         {/* Meta Tags for Social Sharing */}
         <meta
           property="og:image"
-          content="https://yourwebsite.com/Pelican_logo.png"
+          content="https://pelicanwebdev.com/palican-logo.svg"
         />
         <meta property="og:site_name" content="Pelican Webdev" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:image"
-          content="https://yourwebsite.com/Pelican_logo.png"
+          content="https://pelicanwebdev.com/palican-logo.svg"
         />
       </Head>
       <body className="flex flex-col min-h-screen">
