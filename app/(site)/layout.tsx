@@ -6,6 +6,7 @@ import { getPages } from "@/sanity/sanity-utils";
 import Footer from "./components/Footer"; // Assuming Footer component is in the components folder
 import ChatBox from "./components/ChatBox";
 import Head from "next/head";
+import Image from "next/image";
 //import Logo from "./components/logo";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -72,13 +73,30 @@ export default async function RootLayout({
         />
       </Head>
       <body className="flex flex-col min-h-screen">
-        <header className="fixed top-0 left-0 right-0 z-50 flex items-end justify-between bg-gray-800 shadow-xl">
-          <Link
+        <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between bg-gray-800 shadow-xl">
+          {/* <Link
             href="/"
             className=" p-1 ml-3 bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent text-lg font-bold logo-animation"
           >
             Palican Webdev
-          </Link> 
+          </Link>  */}
+          <Link
+            href="/"
+            className="p-1 ml-5 flex flex-col items-center justify-center"
+          >
+            <Image
+              src="/palican-logo.svg"
+              alt="Palican Webdev Logo"
+              width={35} // Adjust the width as per your design
+              height={35} // Adjust the height as per your design
+              className="logo-animation"
+            />
+            <span className="text-white text-[10px] font-bold">
+              Palican Webdev
+            </span>
+            {/* Adjust text size using text-[8px] for very small text */}
+          </Link>
+
           <div className="flex items-center gap-3 text-sm text-gray-600 p-1 mr-1 sm:text-base">
             {pages.map((page) => (
               <Link
@@ -92,8 +110,6 @@ export default async function RootLayout({
             ))}
           </div>
         </header>
-
-        
 
         {/* Main content area with flex-grow to take up available space */}
         <main className="flex-grow py-5 pt-20">{children}</main>

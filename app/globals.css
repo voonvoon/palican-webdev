@@ -55,17 +55,36 @@ html {
 
 /* header animation */
 
- @keyframes bounce {
+ /* @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-10px); /* Lower bounce */
+    transform: translateY(-6px);
   }
   60% {
-    transform: translateY(-5px); /* Lower bounce */
+    transform: translateY(-5px); 
+  }
+} */
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0) rotate(0deg); /* No rotation at start */
+  }
+  40% {
+    transform: translateY(-6px) rotate(10deg); /* Lower bounce with slight rotation */
+  }
+  60% {
+    transform: translateY(-5px) rotate(-8deg); /* Lower bounce with opposite rotation */
+  }
+  70% {
+    transform: translateY(-3px) rotate(6deg); /* Smaller bounce and rotation */
+  }
+  90% {
+    transform: translateY(-1px) rotate(-4deg); /* Minimal bounce and rotation */
   }
 }
+
 
 @keyframes gradientShift {
   0% {

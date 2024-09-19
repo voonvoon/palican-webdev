@@ -121,7 +121,7 @@ const Plan = () => {
                 {plan.description}
               </h4>
 
-              <ul className="mb-6 space-y-2 m-8 overflow-y-auto h-auto custom-scrollbar p-4">
+              <ul className="mb-10 space-y-2 m-8 overflow-y-auto h-auto custom-scrollbar p-4 ">
                 {plan.features.map((feature, i) => (
                   <li
                     key={i}
@@ -153,7 +153,7 @@ const Plan = () => {
               )}
 
               <button
-                className="mb-4 px-4 py-1 bg-green-500 text-white font-semibold rounded-full shadow-lg hover:bg-green-600 transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-300"
+                className="mb-4 px-4 py-1 mt-5 bg-green-500 text-white font-semibold rounded-full shadow-lg hover:bg-green-600 transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-300"
                 onClick={() =>
                   window.open(
                     "https://wa.me/60183795728?text=Hello,%20I%20am%20interested%20in%20your%20services!",
