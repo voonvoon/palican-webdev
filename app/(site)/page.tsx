@@ -9,6 +9,7 @@ import Projects from "./components/Projects";
 import Jumbotron from "./components/Jumbotron";
 import Head from "next/head";
 import TechShowcase from "./components/TechShowcase";
+import ContactForm from "./components/ContactForm";
 
 export const revalidate = 0; // Disable caching
 
@@ -137,6 +138,7 @@ export default async function Home({
         </h2>
 
         <Blog blogs={blogs} />
+        <ContactForm />
       </div>
     </>
   );
