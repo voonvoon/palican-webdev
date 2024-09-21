@@ -79,7 +79,7 @@ const Footer = () => {
             </p>
           </div>
         </div>
-        <div className="flex items-center justify-between text-center mt-8 border-t border-gray-700 pt-4">
+        <div className="flex flex-col sm:flex-row items-center justify-between text-center mt-8 border-t border-gray-700 pt-4">
           <p className="text-gray-500 text-sm">
             &copy; 2024 Pelican Webdev. All rights reserved.
           </p>
