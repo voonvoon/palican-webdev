@@ -16,7 +16,7 @@ type BlogProps = {
 // Blog component using Swiper for swipable blog items
 const Blog = ({ blogs }: BlogProps) => {
   return (
-    <div className="mt-5 overflow-x-auto pb-4">
+    <div className="mt-10 mb-10 overflow-x-auto pb-4 ">
       <Swiper
         modules={[Autoplay]} // Enable autoplay module
         spaceBetween={16} // Space between slides

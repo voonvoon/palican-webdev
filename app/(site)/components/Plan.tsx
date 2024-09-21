@@ -97,7 +97,7 @@ const Plan = () => {
   ];
 
   return (
-    <div className="w-full max-w-3xl mx-auto py-20">
+    <div className="w-full max-w-3xl mx-auto">
       <Swiper
         slidesPerView={1.2}
         spaceBetween={20}

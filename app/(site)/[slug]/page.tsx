@@ -24,6 +24,8 @@ import { getPage } from "@/sanity/sanity-utils";
 import { PortableText } from "next-sanity";
 import Image from "next/image";
 import Jumbotron from "../components/Jumbotron";
+import ContactForm from "../components/ContactForm";
+import FrequentlyAsk from "../components/FrequentlyAsk";
 
 type Props = {
   params: { slug: string };
@@ -33,8 +35,8 @@ export default async function Page({ params }: Props) {
   const page = await getPage(params.slug);
 
   return (
-    <div className="p-16">
-      <h1 className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent text-4xl font-extrabold drop-shadow">
+    <div className="p-8">
+      <h1 className="text-3xl text-gray-700 font-extrabold drop-shadow">
         {page.title}
       </h1>
 
@@ -66,6 +68,9 @@ export default async function Page({ params }: Props) {
       <div className="text-sm text-gray-700 mt-10">
         <PortableText value={page.content} />
       </div>
+
+      <ContactForm />
+      <FrequentlyAsk />
     </div>
   );
 }

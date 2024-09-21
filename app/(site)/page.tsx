@@ -9,6 +9,7 @@ import Projects from "./components/Projects";
 import Jumbotron from "./components/Jumbotron";
 import Head from "next/head";
 import TechShowcase from "./components/TechShowcase";
+import FrequentlyAsk from "./components/FrequentlyAsk";
 import ContactForm from "./components/ContactForm";
 
 export const revalidate = 0; // Disable caching
@@ -125,7 +126,7 @@ export default async function Home({
 
         <h2
           id="my-services"
-          className="mt-12 font-bold text-gray-700 text-3xl text-center"
+          className="mt-12 mb-6 font-bold text-gray-700 text-3xl text-center"
         >
           Plans & Price
         </h2>
@@ -138,6 +139,7 @@ export default async function Home({
         </h2>
 
         <Blog blogs={blogs} />
+        <FrequentlyAsk />
         <ContactForm />
       </div>
     </>

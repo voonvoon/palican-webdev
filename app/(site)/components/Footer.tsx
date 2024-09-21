@@ -1,6 +1,7 @@
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -28,6 +29,11 @@ const Footer = () => {
               <li>
                 <a href="/Contact" className="hover:text-gray-400">
                   Contact
+                </a>
+              </li>
+              <li>
+                <a href="/privacy" className="hover:text-gray-400">
+                 Privacy Policy
                 </a>
               </li>
             </ul>
@@ -65,15 +71,33 @@ const Footer = () => {
             <p className="text-gray-400 text-xs sm:text-sm">
               A-16, Menara simfoni , Jln Simfoni2, Cheras 43300 Malaysia
             </p>
-            <p className="text-gray-400 text-xs sm:text-sm">Email: hvlifeasy@gmail.com</p>
-            <p className="text-gray-400 text-xs sm:text-sm">Phone: 018-3795728</p>
+            <p className="text-gray-400 text-xs sm:text-sm">
+              Email: hvlifeasy@gmail.com
+            </p>
+            <p className="text-gray-400 text-xs sm:text-sm">
+              Phone: 018-3795728
+            </p>
           </div>
         </div>
-
-        <div className="text-center mt-8 border-t border-gray-700 pt-4">
+        <div className="flex items-center justify-between text-center mt-8 border-t border-gray-700 pt-4">
           <p className="text-gray-500 text-sm">
             &copy; 2024 Pelican Webdev. All rights reserved.
           </p>
+          <div>
+            <Link
+              href="/privacy"
+              className="text-gray-500 text-sm hover:text-white transition duration-200 mx-2"
+            >
+              Privacy Policy
+            </Link>
+            <span className="text-gray-400">|</span>
+            <a
+              href="https://pelicanwebdev.com/sitemap-0.xml"
+              className="text-gray-500 text-sm hover:text-white transition duration-200 mx-2"
+            >
+              Sitemap XML
+            </a>
+          </div>
         </div>
       </div>
     </div>

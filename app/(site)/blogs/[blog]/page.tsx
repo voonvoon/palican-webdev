@@ -1,6 +1,8 @@
 import { getBlog } from "@/sanity/sanity-utils";
 import { PortableText } from "@portabletext/react";
 import Image from "next/image";
+import FrequentlyAsk from "../../components/FrequentlyAsk";
+import ContactForm from "../../components/ContactForm";
 
 type Props = {
   params: { blog: string };
@@ -32,6 +34,11 @@ export default async function Blog({ params }: Props) {
         height={270}
         className="mt-10 border-2 border-gray-700 object-cover rounded-xl"
       ></Image>
+      <br/>
+      <br/>
+      
+      <FrequentlyAsk />
+      <ContactForm />
     </div>
   );
 }

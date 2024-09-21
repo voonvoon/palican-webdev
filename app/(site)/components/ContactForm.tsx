@@ -54,9 +54,9 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="max-w-xl mx-auto mt-10">
+    <div className="max-w-xl mx-auto">
       <h2 className="mt-12 font-bold text-gray-700 text-3xl text-center mb-4">Write To Us</h2>
-      <form onSubmit={sendEmail} className="bg-white shadow-xl rounded-lg px-8 py-6">
+      <form onSubmit={sendEmail} className="bg-white shadow-xl rounded-lg px-4 py-6">
         <div className="mb-4">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
             Name
