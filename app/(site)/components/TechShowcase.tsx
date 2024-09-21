@@ -60,7 +60,7 @@ const technologies = [
 
 const TechShowcase = () => {
   return (
-    <div className=" py-16 shadow-lg p-4 h-screen">
+    <div className=" py-16 shadow-lg p-4 ">
       <h2 className="text-center text-2xl font-bold mb-4 sm:text-3xl">
         Powerful Technology Stack
       </h2>
