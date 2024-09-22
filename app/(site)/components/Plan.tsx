@@ -1,7 +1,9 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
 import "swiper/css";
+import "swiper/css/autoplay";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 import { MdOutlineWorkspacePremium } from "react-icons/md";
 
@@ -22,7 +24,24 @@ type PlanType = {
 const Plan = () => {
   const plans: PlanType[] = [
     {
-      title: "Standard",
+      title: "Website",
+      description: "For companies or individuals in need of a website",
+      features: [
+        { text: "4 ~ 8 pages Website" },
+        { text: "Fully Own Source Code" },
+        { text: "Social Media Integration" },
+        { text: "Live Chat Whatsapp Integration" },
+        { text: "SEO App Optimization" },
+        { text: "Content Management System" },
+        { text: "Domain & Hosting & SSL (free 1 year)" },
+        { text: "Mobile Responsive" },
+        { text: "Ultra-Speedy with Next.js" },
+      ],
+      priceBefore: "RM2500",
+      price: "RM1500",
+    },
+    {
+      title: "E-commerce",
       description: "For Company plan to create an E-commerce",
       features: [
         { text: "No Monthly Subscription fee!" },
@@ -35,7 +54,7 @@ const Plan = () => {
         { text: "Live Chat Whatsapp Integration" },
         { text: "Authentication (User Login e.g., Google)" },
         { text: "Automated Email" },
-        { text: "SEO App Friendly" },
+        { text: "SEO App Optimization" },
         { text: "Cloud-based Database (MongoDB)" },
         { text: "Admin Dashboard" },
         { text: "Products CRM System" },
@@ -49,7 +68,7 @@ const Plan = () => {
       price: "RM3900",
     },
     {
-      title: "Premium",
+      title: "Advance E-commerce",
       description:
         "SMEs, Corporate and Other Company plan to create an E-commerce",
       features: [
@@ -73,7 +92,7 @@ const Plan = () => {
         { text: "Authentication (User Login e.g., Google)" },
         { text: "Automated Email" },
 
-        { text: "SEO App Friendly" },
+        { text: "SEO App Optimization" },
         { text: "Cloud-based Database (MongoDB)" },
         { text: "Admin Dashboard" },
         { text: "Products CRM System" },
@@ -91,18 +110,25 @@ const Plan = () => {
     {
       title: "Custom Plan",
       description:
-        "SMEs, Corporate and Other Company plan to create an E-commerce, Designed for companies with unique needs, Our Custom Plan offers tailored solutions and exclusive features to fit your business requirements. Get the flexibility and customization you need to scale and optimize your operations.",
+        "I offer the flexibility and customization you need to scale and optimize your business, ensuring your website grows with your goals and adapts to your unique requirements.",
       features: [],
     },
   ];
 
   return (
-    <div className="w-full max-w-3xl mx-auto">
+    <div className="w-full max-w-3xl mx-auto mb-10">
       <Swiper
+        modules={[Autoplay]}
         slidesPerView={1.2}
-        spaceBetween={20}
+        spaceBetween={10}
         grabCursor={true}
         centeredSlides={true}
+        autoplay={{
+          delay: 8000, // Slow down the autoplay (6 seconds between slides)
+          disableOnInteraction: false, // Continue autoplay after user interactions
+        }}
+        loop={true} // Enable infinite loop
+        speed={1500} // Slow transition speed
       >
         {plans.map((plan, index) => (
           <SwiperSlide key={index}>
@@ -117,15 +143,15 @@ const Plan = () => {
               <h3 className="mt-8 text-2xl font-bold bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent">
                 {plan.title}
               </h3>
-              <h4 className="text-xs text-gray-500 mb-0 mt-2 p-4 sm:text-sm">
+              <h4 className="text-xs font-bold text-gray-500 mb-0 mt-1 p-4 sm:text-sm">
                 {plan.description}
               </h4>
 
-              <ul className="mb-10 space-y-2 m-8 overflow-y-auto h-auto custom-scrollbar p-4 ">
+              <ul className="mb-10 space-y-2 m-4 overflow-y-auto h-auto custom-scrollbar p-4 ">
                 {plan.features.map((feature, i) => (
                   <li
                     key={i}
-                    className={`text-gray-600 text-xs flex items-center sm:text-sm truncate ${
+                    className={`text-gray-600 text-xs flex items-center sm:text-sm truncate  font-light ${
                       feature.highlight ? "font-bold" : ""
                     }`}
                   >
@@ -146,9 +172,7 @@ const Plan = () => {
                   <p className="line-through text-sm text-gray-500">
                     {plan.priceBefore}
                   </p>
-                  <p className=" animate-fadeIn text-lg font-bold">
-                    {plan.price}
-                  </p>
+                  <p className=" animate-fadeIn text-xl ">{plan.price}</p>
                 </>
               )}
 

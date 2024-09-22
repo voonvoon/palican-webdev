@@ -55,7 +55,7 @@ const Accordion = () => {
 
   return (
     // <div className="w-full max-w-lg mx-auto p-4 m-8 space-y-4">
-    <div className="w-full max-w-lg h-screen mx-auto p-4 space-y-4 mb-8">
+    <div className="w-full max-w-lg mx-auto p-4 space-y-4 mb-8">
       <h2 className="mt-4 font-bold text-gray-700 text-3xl text-center mb-8">
         Frequently Ask Question
       </h2>
@@ -63,7 +63,7 @@ const Accordion = () => {
         <div key={index}>
           <button
             onClick={() => handleToggle(index)}
-            className="w-full text-left text-sm bg-gray-100 px-4 py-2  text-gray-800 rounded-lg shadow-md focus:outline-none transition duration-200 sm:text-base"
+            className="font-bold w-full text-left text-sm bg-gray-100 px-4 py-2  text-gray-800 rounded-lg shadow-md focus:outline-none transition duration-200 sm:text-base"
           >
             {faq.question}
             <span
@@ -83,7 +83,7 @@ const Accordion = () => {
             }}
           >
             <div className="bg-white p-4 mt-2 rounded-lg shadow-inner">
-              <p className="text-xs sm:text-base">{faq.answer}</p>
+              <p className="text-xs sm:text-base  font-light">{faq.answer}</p>
             </div>
           </div>
         </div>

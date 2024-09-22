@@ -11,6 +11,7 @@ import Head from "next/head";
 import TechShowcase from "./components/TechShowcase";
 import FrequentlyAsk from "./components/FrequentlyAsk";
 import ContactForm from "./components/ContactForm";
+import About from "./components/About";
 
 export const revalidate = 0; // Disable caching
 
@@ -20,7 +21,7 @@ export default async function Home({
   searchParams: { page?: string };
 }) {
   const currentPage = parseInt(searchParams.page || "1");
-  const itemsPerPage = 3;
+  const itemsPerPage = 4;
   const start = (currentPage - 1) * itemsPerPage;
 
   // Fetch one extra item to determine if there are more pages
@@ -68,9 +69,9 @@ export default async function Home({
         <div className="text-lg text-gray-600 pl-8">
           <Jumbotron
             text={[
-              "Aloha everyone!",
               "Welcome to Palican Webdev...",
-              "I specialize in developing e-commerce solutions",
+              "Specialize in developing e-commerce solutions",
+              "Website Design And Development Service"
             ]}
           />
         </div>
@@ -78,9 +79,9 @@ export default async function Home({
         <p className="text-sm text-gray-400 pl-8 animate-fadeIn">
           I specialize in developing e-commerce solutions, providing
           custom-tailored online stores that meet the unique needs of businesses
-          and individuals. My expertise is focused on creating professional and
-          engaging e-commerce websites that elevate online presence and drive
-          results.
+          and individuals. Alongside e-commerce, I also offer website design and
+          development services, creating professional and engaging websites that
+          elevate online presence and drive results.
         </p>
         <h2 className="mt-12 font-bold text-gray-700 text-3xl ml-10">
           My Works
@@ -132,6 +133,8 @@ export default async function Home({
         </h2>
 
         <Plan />
+
+        <About />
 
         <TechShowcase />
         <h2 className="mt-12 font-bold text-gray-700 text-3xl text-center">

@@ -14,7 +14,8 @@ type ProjectsProps = {
 
 const Projects = ({ displayedProjects }: ProjectsProps) => {
   return (
-    <div className="mt-5 grid md:grid-cols-2 lg:grid-cols-3 gap-8 p-4 mb-16 ">
+    <div className="mt-10 grid  md:grid-cols-2 lg:grid-cols-4 gap-4 p-2 mb-16">
+
       {displayedProjects.map((project: Project) => (
         <Link href={`/projects/${project.slug}`} key={project._id}>
           <div className="group relative flex flex-col items-stretch hover:scale-105 transition cursor-pointer shadow-md p-2">
