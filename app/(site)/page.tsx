@@ -12,6 +12,7 @@ import TechShowcase from "./components/TechShowcase";
 import FrequentlyAsk from "./components/FrequentlyAsk";
 import ContactForm from "./components/ContactForm";
 import About from "./components/About";
+import ImageSection from "./components/Image";
 
 export const revalidate = 0; // Disable caching
 
@@ -71,7 +72,7 @@ export default async function Home({
             text={[
               "Welcome to Palican Webdev...",
               "Specialize in developing e-commerce solutions",
-              "Website Design And Development Service"
+              "Website Design And Development Service",
             ]}
           />
         </div>
@@ -133,6 +134,9 @@ export default async function Home({
         </h2>
 
         <Plan />
+
+        <ImageSection />
+
 
         <About />
 

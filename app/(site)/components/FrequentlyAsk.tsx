@@ -18,7 +18,7 @@ const Accordion = () => {
 
   const faqs = [
     {
-      question: "Who am i?",
+      question: "What i do?",
       answer:
         "My name is Peter, I am a freelance developer base in Malaysia. I create clean and responsive websites specializing in e-commerce and other services.",
     },
@@ -48,9 +48,9 @@ const Accordion = () => {
     },
     {
       question: "Why do I need an e-commerce website?",
-      answer: "An e-commerce website allows you to reach a wider audience, operate 24/7, and streamline your sales process, making it easier for customers to shop online.",
-    }
-   
+      answer:
+        "An e-commerce website allows you to reach a wider audience, operate 24/7, and streamline your sales process, making it easier for customers to shop online.",
+    },
   ];
 
   return (
@@ -63,7 +63,7 @@ const Accordion = () => {
         <div key={index}>
           <button
             onClick={() => handleToggle(index)}
-            className="font-bold w-full text-left text-sm bg-gray-100 px-4 py-2  text-gray-800 rounded-lg shadow-md focus:outline-none transition duration-200 sm:text-base"
+            className="w-full text-left text-sm bg-gray-700 text-white  px-4 py-2  rounded-lg shadow-md focus:outline-none transition duration-200 sm:text-base"
           >
             {faq.question}
             <span
@@ -82,7 +82,7 @@ const Accordion = () => {
               maxHeight: activeIndex === index ? `${height}px` : "0",
             }}
           >
-            <div className="bg-white p-4 mt-2 rounded-lg shadow-inner">
+            <div className="bg-gray-700 text-white p-4 mt-2 rounded-lg shadow-inner">
               <p className="text-xs sm:text-base  font-light">{faq.answer}</p>
             </div>
           </div>
