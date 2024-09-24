@@ -8,7 +8,6 @@ import { Autoplay } from "swiper/modules"; // Import Autoplay module
 import "swiper/css"; // Import Swiper styles
 import "swiper/css/autoplay"; // Import Swiper autoplay styles
 
-// Defining a separate BlogProps type makes it immediately clear that you're defining the structure of the component’s props.
 type BlogProps = {
   blogs: Blog[];
 };
@@ -37,8 +36,8 @@ const Blog = ({ blogs }: BlogProps) => {
         {blogs?.map((blog: Blog) => (
           <SwiperSlide key={blog._id}>
             <Link href={`/blogs/${blog?.slug}`}>
-              <div className="group relative flex flex-col items-stretch hover:scale-105 transition cursor-pointer shadow-md p-1">
-                <div className="w-full h-35 overflow-hidden rounded-md bg-gray-200 flex-shrink-0 group-hover:opacity-75">
+              <div className="group relative flex flex-col items-stretch hover:scale-105 transition cursor-pointer shadow-md ">
+                <div className="relative w-full h-35 overflow-hidden rounded-lg bg-gray-200 flex-shrink-0">
                   {blog.image && (
                     <Image
                       src={blog.image}
@@ -48,19 +47,33 @@ const Blog = ({ blogs }: BlogProps) => {
                       className="w-full h-full object-cover"
                     />
                   )}
-                </div>
 
-                <div className="mt-4 flex justify-between flex-grow">
-                  <div>
-                    <h3 className="text-sm text-gray-700 p-2">
-                      <span
-                        aria-hidden="true"
-                        className="absolute inset-0 "
-                      ></span>
+                  <div className="absolute top-2 left-2">
+                    <Image
+                      src="/palican-logo.svg" // Assuming your logo is in the public folder as 'profile.jpg'
+                      alt="Pelican Webdev Logo"
+                      width={30} // Set the appropriate size for the logo
+                      height={30}
+                      className="object-contain"
+                    />
+                  </div>
+
+                  {/* Text overlay on the image */}
+                  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 opacity-100 ">
+                    <h3 className="text-white text-lg font-bold text-center p-1 border">
                       {blog?.title}
                     </h3>
                   </div>
                 </div>
+
+                {/* <div className="mt-4 flex justify-between flex-grow">
+                  <div>
+                    <h3 className="text-sm text-gray-700 p-2">
+                      <span aria-hidden="true" className="absolute inset-0"></span>
+                      {blog?.title}
+                    </h3>
+                  </div>
+                </div> */}
               </div>
             </Link>
           </SwiperSlide>

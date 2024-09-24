@@ -60,14 +60,16 @@ export default async function Home({
         />
       </Head>
       <div className="p-8">
-        <div className="text-5xl font-extrabold pt-16 pb-16 pl-8">
+        <h1 className="text-5xl font-extrabold pt-16 pb-8 pl-8">
           Welcome to{" "}
           <span className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent animate-fadeIn">
             Pelican Webdev
           </span>
-        </div>
+        </h1>
 
-        <div className="text-lg text-gray-600 pl-8">
+        <h2 className="text-xl text-gray-500 pl-8 font-bold animate-fadeIn mb-8"> E-commerce & Website Developer in Malaysia</h2>
+
+        <div className="text-base text-gray-600 pl-8">
           <Jumbotron
             text={[
               "Welcome to Palican Webdev...",
@@ -136,7 +138,6 @@ export default async function Home({
         <Plan />
 
         <ImageSection />
-
 
         <About />
 
