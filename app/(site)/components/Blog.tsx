@@ -22,7 +22,7 @@ const Blog = ({ blogs }: BlogProps) => {
         slidesPerView={1} // Adjust to show one slide at a time; you can change this based on the screen size
         loop={true} // Make it loop infinitely
         autoplay={{
-          delay: 1500, // Delay between slides in milliseconds
+          delay: 3000, // Delay between slides in milliseconds
           disableOnInteraction: false, // Keeps autoplay running after user interactions
         }}
         breakpoints={{
@@ -60,7 +60,7 @@ const Blog = ({ blogs }: BlogProps) => {
 
                   {/* Text overlay on the image */}
                   <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 opacity-100 ">
-                    <h3 className="text-white text-lg font-bold text-center p-1 border">
+                    <h3 className="text-white text-base font-bold text-center p-2 m-2 border-2 border-dashed  border-gray-300">
                       {blog?.title}
                     </h3>
                   </div>
