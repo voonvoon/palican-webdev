@@ -86,7 +86,7 @@ const TechShowcase = () => {
               {tech.name}
             </h3>
 
-            <div className="cursor-pointer p-4 pl-6 absolute inset-0 flex items-center justify-center bg-gray-800 bg-opacity-75 text-white text-sm rounded-lg opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+            <div className="cursor-pointer p-4 pl-6 absolute inset-0 flex items-center justify-center font-light bg-gray-800 bg-opacity-75 text-white text-sm rounded-lg opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
               {tech.description}
             </div>
           </motion.div>

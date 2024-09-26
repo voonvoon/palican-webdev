@@ -9,14 +9,19 @@ import Head from "next/head";
 import Image from "next/image";
 //import Logo from "./components/logo";
 
+import {
+  localBusinessStructuredData,
+  productStructuredData,
+} from "./strutureData/structuredData";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Pelican Webdev | E-commerce Website Designer in Malaysia",
   description:
     //"Malaysia-based full-stack web developer specializing in e-commerce solutions with Next.js, Node.js, and MongoDB. Building fast, scalable, and user-friendly websites for businesses.",
-    "Pelican Webdev builds fast, scalable e-commerce websites. Trusted by businesses across Malaysia for web design and development using Next.js, Node.js, and MongoDB.", 
-    icons: {
+    "Pelican Webdev builds fast, scalable e-commerce websites. Trusted by businesses across Malaysia for web design and development using Next.js, Node.js, and MongoDB.",
+  icons: {
     icon: "/palican-logo.svg", // Add this line for the favicon
   },
 };
@@ -31,6 +36,20 @@ export default async function RootLayout({
   return (
     <html lang="en" className="h-full">
       <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(localBusinessStructuredData),
+          }}
+        />
+
+        {/* JSON-LD for Product */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(productStructuredData),
+          }}
+        />
         {/* Google Tag (gtag.js) */}
         <script
           async
@@ -48,6 +67,7 @@ export default async function RootLayout({
         />
 
         {/* Structured Data for Logo(For Google search) */}
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

@@ -7,7 +7,10 @@ const Title = () => {
       <h1 className="text-5xl font-extrabold pt-16 pb-8 pl-8">
         <ParticlesBackground />
         Welcome to{" "}
-        <span className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent animate-fadeIn">
+        {/* <span className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent animate-fadeIn">
+          Pelican Webdev
+        </span> */}
+        <span className=" logo-animation animate-fadeIn">
           Pelican Webdev
         </span>
       </h1>
