@@ -23,7 +23,7 @@ const SEO = () => {
           Search Engine Optimization
         </h2>
         <p className="text-gray-600 text-sm sm:text-base font-light mb-4 leading-relaxed">
-          Improve your website's visibility and ranking on search engines with
+          Improve your website&aposs visibility and ranking on search engines with
           effective SEO strategies tailored for your business.
         </p>
 
