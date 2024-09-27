@@ -9,10 +9,7 @@ import Head from "next/head";
 import Image from "next/image";
 //import Logo from "./components/logo";
 
-import {
-  localBusinessStructuredData,
-  productStructuredData,
-} from "./strutureData/structuredData";
+import { localBusinessStructuredData } from "./strutureData/structuredData";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -35,6 +32,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en" className="h-full">
+      {/* JSON-LD for LocalBusiness */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -42,13 +40,6 @@ export default async function RootLayout({
         }}
       />
 
-      {/* JSON-LD for Product */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(productStructuredData),
-        }}
-      />
       <Head>
         {/* Google Tag (gtag.js) */}
         <script
