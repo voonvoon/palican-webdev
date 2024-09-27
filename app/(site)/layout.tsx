@@ -35,21 +35,21 @@ export default async function RootLayout({
 
   return (
     <html lang="en" className="h-full">
-      <Head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(localBusinessStructuredData),
-          }}
-        />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(localBusinessStructuredData),
+        }}
+      />
 
-        {/* JSON-LD for Product */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(productStructuredData),
-          }}
-        />
+      {/* JSON-LD for Product */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(productStructuredData),
+        }}
+      />
+      <Head>
         {/* Google Tag (gtag.js) */}
         <script
           async
