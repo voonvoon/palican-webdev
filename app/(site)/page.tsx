@@ -13,8 +13,10 @@ import FrequentlyAsk from "./components/FrequentlyAsk";
 import ContactForm from "./components/ContactForm";
 import About from "./components/About";
 import ImageSection from "./components/Image";
-
 import Title from "./components/Title";
+import SEO from "./components/SEO";
+
+import { localBusinessStructuredData } from "./strutureData/structuredData";
 
 export const revalidate = 0; // Disable caching
 
@@ -43,7 +45,12 @@ export default async function Home({
 
   return (
     <>
-      {" "}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(localBusinessStructuredData),
+        }}
+      />{" "}
       <Head>
         {/* Google Tag (gtag.js) */}
         <script
@@ -145,7 +152,7 @@ export default async function Home({
         <Plan />
 
         <ImageSection />
-
+        <SEO />
         <About />
 
         <TechShowcase />
