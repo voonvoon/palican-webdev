@@ -161,31 +161,40 @@ const Accordion = () => {
       "Yes, I provide all necessary SEO services, including Google Search Console submission, Sitemap, Keyword Research, On-Page Optimization, and more with an additional cost. However, as my core service is application development, I recommend hiring an SEO expert or agency for advanced SEO needs.",
   };
 
+  // const structuredData = {
+  //   "@context": "https://schema.org",
+  //   "@type": "FAQPage",
+  //   mainEntity: faqs.map((faq) => ({
+  //     "@type": "Question",
+  //     name: faq.question,
+  //     acceptedAnswer: {
+  //       "@type": "Answer",
+  //       text: faq.answer,
+  //     },
+  //   })),
+  // };
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: faqs.map((faq) => ({
-      "@type": "Question",
-      name: faq.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.answer,
-      },
-    })),
-  };
-
-  const structureDataSeoFaq = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": {
-      "@type": "Question",
-      "name": "Will you do SEO for the Website too?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, I provide all necessary SEO services, including Google Search Console submission, Sitemap, Keyword Research, On-Page Optimization, and more with an additional cost. However, as my core service is application development, I recommend hiring an SEO expert or agency for advanced SEO needs."
+    mainEntity: [
+      ...faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.answer,
+        },
+      })),
+      {
+        "@type": "Question",
+        name: "Will you do SEO for the Website too?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, I provide all necessary SEO services, including Google Search Console submission, Sitemap, Keyword Research, On-Page Optimization, and more with an additional cost. However, as my core service is application development, I recommend hiring an SEO expert or agency for advanced SEO needs."
+        }
       }
-    }
-  }
+    ],
+  };
   
 
   return (
@@ -198,12 +207,6 @@ const Accordion = () => {
         }}
       />
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structureDataSeoFaq),
-        }}
-      />
 
       <h2 className="font-bold text-gray-700 text-3xl text-center mb-8">
         Frequently Asked Questions
