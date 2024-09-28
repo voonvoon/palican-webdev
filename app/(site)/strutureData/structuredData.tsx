@@ -36,6 +36,46 @@ export const localBusinessStructuredData = {
       "priceCurrency": "MYR",
     }
   };
+
+  export const productEcomStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "E-Commerce",
+    "url": "https://pelicanwebdev.com",
+    "image": "https://pelicanwebdev.com/_next/image?url=%2Fimages%2Fecommerce.png&w=1200&q=75",
+    "description": "Custom, scalable e-commerce websites designed to boost online sales and provide a seamless shopping experience for businesses and individuals.",
+    "brand": {
+      "@type": "Brand",
+      "name": "Pelican Webdev",
+      "logo": "https://pelicanwebdev.com/palican-logo.svg"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "3900",
+      "priceCurrency": "MYR",
+    }
+  };
+
+  export const productAdvancedEcomStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Advanced E-Commerce",
+    "url": "https://pelicanwebdev.com",
+    "image": "https://pelicanwebdev.com/_next/image?url=%2Fimages%2Fecommerce.png&w=1200&q=75",
+    "description": "Advanced e-commerce solutions with integrated payment gateways, optimized performance, and personalized features to drive growth and streamline your online business.",
+    "brand": {
+      "@type": "Brand",
+      "name": "Pelican Webdev",
+      "logo": "https://pelicanwebdev.com/palican-logo.svg"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "4900",
+      "priceCurrency": "MYR",
+    }
+  };
+  
+  
   
 
 

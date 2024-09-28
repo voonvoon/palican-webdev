@@ -19,6 +19,8 @@ import SEO from "./components/SEO";
 import {
   localBusinessStructuredData,
   productWebsiteStructuredData,
+  productEcomStructuredData,
+  productAdvancedEcomStructuredData,
 } from "./strutureData/structuredData";
 
 export const revalidate = 0; // Disable caching
@@ -58,6 +60,18 @@ export default async function Home({
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(productWebsiteStructuredData),
+        }}
+      />{" "}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(productEcomStructuredData),
+        }}
+      />{" "}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(productAdvancedEcomStructuredData),
         }}
       />{" "}
       <Head>
