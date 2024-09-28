@@ -174,6 +174,20 @@ const Accordion = () => {
     })),
   };
 
+  const structureDataSeoFaq = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": {
+      "@type": "Question",
+      "name": "Will you do SEO for the Website too?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, I provide all necessary SEO services, including Google Search Console submission, Sitemap, Keyword Research, On-Page Optimization, and more with an additional cost. However, as my core service is application development, I recommend hiring an SEO expert or agency for advanced SEO needs."
+      }
+    }
+  }
+  
+
   return (
     <div className="w-full max-w-lg mx-auto p-4 space-y-4 mb-8">
       {/* Add the JSON-LD structured data to the page */}
@@ -183,7 +197,14 @@ const Accordion = () => {
           __html: JSON.stringify(structuredData),
         }}
       />
-      {/* Other FAQs */}
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structureDataSeoFaq),
+        }}
+      />
+
       <h2 className="font-bold text-gray-700 text-3xl text-center mb-8">
         Frequently Asked Questions
       </h2>
