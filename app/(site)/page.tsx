@@ -16,7 +16,10 @@ import ImageSection from "./components/Image";
 import Title from "./components/Title";
 import SEO from "./components/SEO";
 
-import { localBusinessStructuredData } from "./strutureData/structuredData";
+import {
+  localBusinessStructuredData,
+  productWebsiteStructuredData,
+} from "./strutureData/structuredData";
 
 export const revalidate = 0; // Disable caching
 
@@ -49,6 +52,12 @@ export default async function Home({
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(localBusinessStructuredData),
+        }}
+      />{" "}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(productWebsiteStructuredData),
         }}
       />{" "}
       <Head>
