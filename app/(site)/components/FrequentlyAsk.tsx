@@ -139,7 +139,7 @@ const Accordion = () => {
       answer: "Yes! We offer ongoing maintenance and support after launch.",
     },
     {
-      question: "How much does it cost to build a website?",
+      question: "Website development cost?",
       answer:
         "Our pricing depends on the features and scale of the project. Contact us for a custom quote or refer to the plan & price section.",
     },

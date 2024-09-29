@@ -65,7 +65,7 @@ const TechShowcase = () => {
         Powerful Technology Stack
       </h2>
       <h2 className="text-center text-lg mb-8 sm:text-2xl">
-        Your E-commerce Website is Lightning Fast!!
+        Full Stack web developer & Ecommerce Website !!
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 px-4 sm:gap-8 sm:px-8 max-w-6xl mx-auto">
         {technologies.map((tech, index) => (
