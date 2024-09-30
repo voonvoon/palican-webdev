@@ -14,10 +14,10 @@ import Image from "next/image";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Pelican Webdev | E-commerce Website Designer in Malaysia",
+  title: "Pelican Webdev | E-commerce Website Building & Design in Malaysia  ",
   description:
     //"Malaysia-based full-stack web developer specializing in e-commerce solutions with Next.js, Node.js, and MongoDB. Building fast, scalable, and user-friendly websites for businesses.",
-    "Pelican Webdev builds fast, scalable e-commerce websites. Trusted by businesses across Malaysia for web design and development using Next.js, Node.js, and MongoDB.",
+    "Pelican Webdev builds fast, scalable e-commerce website design. freelance website designer trusted by businesses across Malaysia for website design and ecommerce website building using Next.js, Node.js, and MongoDB.",
   icons: {
     icon: "/palican-logo.svg", // Add this line for the favicon
   },

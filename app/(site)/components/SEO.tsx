@@ -23,8 +23,9 @@ const SEO = () => {
           Search Engine Optimization(SEO)
         </h2>
         <p className="text-gray-600 text-sm sm:text-base font-light mb-12 leading-relaxed">
-          Improve your website&apos;s visibility and ranking on search engines
-          with effective SEO strategies tailored for your business.
+          When creating an ecommerce website, improve your website&apos;s
+          visibility and ranking on search engines with effective SEO strategies
+          tailored for your business.
         </p>
 
         <div className="flex justify-center">

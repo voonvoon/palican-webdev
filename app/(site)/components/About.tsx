@@ -11,7 +11,7 @@ const About = () => {
             I am a full-stack web developer passionate about create ecommerce
             website and professional websites optimized for SEO. Specializing in
             Next.js, Node.js, and MongoDB, I help businesses build fast,
-            scalable, and user-friendly online stores and websites tailored to
+            scalable, and user-friendly ecommerce website building and websites tailored to
             their needs. With expertise in both front-end and back-end
             development, I deliver seamless solutions that drive growth and
             enhance user experience. I’m dedicated to helping clients achieve
