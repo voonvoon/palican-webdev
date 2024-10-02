@@ -88,7 +88,7 @@ const RealEstateListing: React.FC = () => {
         management system (CMS). With my expertise, I ensure that your website
         not only looks professional but also functions seamlessly, enabling you
         to attract more clients and streamline your property management process.
-        Let's work together to elevate your online presence and drive success in
+        Let&apos; work together to elevate your online presence and drive success in
         your real estate business!
       </p>
       <div className="mt-6">
