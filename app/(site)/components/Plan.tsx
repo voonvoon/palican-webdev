@@ -37,8 +37,8 @@ const Plan = () => {
         { text: "Mobile Responsive" },
         { text: "Ultra-Speedy with Next.js" },
       ],
-      priceBefore: "RM2500",
-      price: "RM1500",
+      priceBefore: "45/hr",
+      price: "RM40/hr",
     },
     {
       title: "E-commerce",
@@ -64,8 +64,8 @@ const Plan = () => {
         { text: "Image Optimization (Cloudinary)" },
         { text: "Ultra-Speedy with Next.js" },
       ],
-      priceBefore: "RM5500",
-      price: "RM3900",
+      priceBefore: "RM45/hr",
+      price: "RM40/hr",
     },
     {
       title: "Advance E-commerce",
@@ -103,8 +103,8 @@ const Plan = () => {
         { text: "Image Optimization (Cloudinary)" },
         { text: "Ultra-Speedy with Next.js" },
       ],
-      priceBefore: "RM6500",
-      price: "RM4900",
+      priceBefore: "RM45/hr",
+      price: "RM40/hr",
       popular: true, // Mark the Premium plan as popular
     },
     {

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
+import Link from "next/link";
 
 const ImageSection = () => {
   const controls = useAnimation();
@@ -22,22 +23,22 @@ const ImageSection = () => {
   }, [controls, inView]);
 
   return (
-    <div className="w-full flex justify-center mt-20 mb-20">
+    <Link href="/real-estate-website" className="w-full flex justify-center mt-20 mb-20">
       <motion.div
         ref={ref}
         initial={{ opacity: 0, scale: 0.8 }} // Initial state (hidden and scaled down)
         animate={controls}
-        className="rounded-lg shadow-lg"
+        className="rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
       >
         <Image
-          src="/images/ecommerce.png" // Replace with your actual image file path
+          src="/real-estate2.png" // Replace with your actual image file path
           alt="palican webdev advertising images with qr code"
           width={600}
           height={600}
           className="rounded-lg shadow-lg"
         />
       </motion.div>
-    </div>
+    </Link>
   );
 };
 
