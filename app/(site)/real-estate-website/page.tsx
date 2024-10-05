@@ -18,7 +18,7 @@ interface Package {
     contactForm: boolean;
     searchListingFunction: boolean;
     revisions: number;
-    numberDays:number;
+    numberDays: number;
   };
 }
 
@@ -56,7 +56,7 @@ const packages: Package[] = [
       domainSetup: true,
       numberOfListing: "unlimited",
       revisions: 5,
-      numberDays: 6
+      numberDays: 6,
     },
   },
 ];
@@ -65,8 +65,7 @@ const RealEstateListing: React.FC = () => {
   return (
     <div className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-lg">
       <h1 className="text-2xl font-bold text-gray-700 mb-4 text-center sm:text-3xl ">
-        Create A Custom, Professional & Modern Real Estate Website For Property
-        Agent
+        Real Estate Listing Website For Property Agent
       </h1>
       <div className="relative mb-4">
         <Image
@@ -80,7 +79,7 @@ const RealEstateListing: React.FC = () => {
         <h1
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
   text-xl sm:text-2xl lg:text-3xl font-extrabold text-white opacity-90 
-  px-4 sm:px-6 lg:px-8 text-center sm:my-6 lg:my-8 leading-tight sm:leading-snug lg:leading-normal"
+  px-4 sm:px-6 lg:px-8 text-center sm:my-6 lg: leading-tight sm:leading-snug lg:leading-normal"
         >
           Real Estate Agent Website with Content Management System (CMS)
         </h1>
@@ -249,6 +248,30 @@ const RealEstateListing: React.FC = () => {
             <tr>
               <td className="py-1 px-2 sm:py-2 sm:px-4 border border-gray-200 text-sm sm:text-base">
                 On-site SEO optimization
+                <span className="ml-1 relative group inline-block">
+                  <span className="text-gray-700 text-xs cursor-pointer flex items-center justify-center w-4 h-4 border-2 border-gray-700 rounded-full hover:bg-gray-300 transition duration-200">
+                    ?
+                  </span>
+                  <div className="absolute left-0 top-full mt-1 opacity-0 group-hover:opacity-100 bg-gray-700 text-white font-light text-xs rounded-md p-2 z-10 w-52">
+                    <ul className="list-disc list-inside">
+                      <li>Keyword Research and Optimization</li>
+                      <li>Goolge Search Console submission</li>
+                      <li>Sitemap creation and submission</li>
+                      <li>Title Tags and Meta Descriptions</li>
+                      <li>Header Tags (H1, H2, H3)</li>
+                      <li>Content Quality and Relevance</li>
+                      <li>Image Optimization</li>
+                      <li>URL Structure</li>
+                      <li>Internal Linking</li>
+                      <li>Mobile-Friendliness</li>
+                      <li>Page Load Speed</li>
+                      <li>User Experience (UX)</li>
+                      <li>Schema Markup</li>
+                      <li>Social Sharing Integration</li>
+                      <li>Security (HTTPS)</li>
+                    </ul>
+                  </div>
+                </span>
               </td>
               <td className="py-1 px-2 sm:py-2 sm:px-4 border border-gray-200 text-center text-sm sm:text-base">
                 {packages[0].features.seoFriently ? (
@@ -309,13 +332,13 @@ const RealEstateListing: React.FC = () => {
 
             <tr>
               <td className="py-1 px-2 sm:py-2 sm:px-4 border border-gray-200 text-sm sm:text-base">
-              Delivery Time
+                Delivery Time
               </td>
               <td className="py-1 px-2 sm:py-2 sm:px-4 border border-gray-200 text-center text-sm sm:text-base">
                 {packages[0].features.numberDays} days
               </td>
               <td className="py-1 px-2 sm:py-2 sm:px-4 border border-gray-200 text-center text-sm sm:text-base">
-                {packages[1].features.numberDays} days  
+                {packages[1].features.numberDays} days
               </td>
             </tr>
 
@@ -323,10 +346,10 @@ const RealEstateListing: React.FC = () => {
               <td className="py-1 px-2 sm:py-2 sm:px-4 border border-gray-200 font-bold text-sm sm:text-base relative">
                 Price
                 <span className="ml-1 relative group inline-block">
-                  <span className="text-gray-700 text-sm cursor-pointer">
-                    **
+                  <span className="text-gray-700 text-xs cursor-pointer flex items-center justify-center w-4 h-4 border-2 border-gray-700 rounded-full hover:bg-gray-300 transition duration-200">
+                    ?
                   </span>
-                  <div className="absolute left-0 top-full mt-1 opacity-0 group-hover:opacity-100 bg-gray-700 text-white font-light text-sm rounded-md p-2 z-10">
+                  <div className="absolute left-0 top-full mt-1 opacity-0 group-hover:opacity-100 bg-gray-700 text-white font-light text-xs rounded-md p-2 z-10 w-40">
                     Domain fee not included
                   </div>
                 </span>
@@ -352,6 +375,13 @@ const RealEstateListing: React.FC = () => {
           Contact
         </button>
       </div>
+      <Image
+        src="/real-estate-listing2.jpg" // Replace with your image path
+        alt="Stunning Family Home"
+        width={600} // Set a width of your choice
+        height={400} // Set a height of your choice
+        className="w-full h-auto rounded-lg"
+      />
       <Image
         src="/real-estate-listing.jpg" // Replace with your image path
         alt="Stunning Family Home"
@@ -387,7 +417,6 @@ const RealEstateListing: React.FC = () => {
         </li>
         <li>Headless CMS Integration (Sanity.io)</li>
         <li>Backend Development with Node.js, Express.js, React.js</li>
-        <li>Databases: MongoDB</li>
       </ul>
 
       <p className="text-gray-600 text-sm sm:text-base font-normal mb-4 leading-relaxed">
@@ -406,6 +435,13 @@ const RealEstateListing: React.FC = () => {
         <li>SSL installation for secure browsing</li>
         <li>Free deployment on Vercel</li>
       </ul>
+      <Image
+        src="/real-estate-listing3.jpg" // Replace with your image path
+        alt="Stunning Family Home"
+        width={600} // Set a width of your choice
+        height={400} // Set a height of your choice
+        className="w-full h-auto rounded-lg"
+      />
     </div>
   );
 };
