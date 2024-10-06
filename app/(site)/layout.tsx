@@ -7,6 +7,7 @@ import Footer from "./components/Footer"; // Assuming Footer component is in the
 import ChatBox from "./components/ChatBox";
 import Head from "next/head";
 import Image from "next/image";
+
 //import Logo from "./components/logo";
 
 //import { localBusinessStructuredData } from "./strutureData/structuredData";

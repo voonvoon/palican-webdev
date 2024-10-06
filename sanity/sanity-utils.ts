@@ -18,6 +18,21 @@ export async function getProjects(start = 0, limit = 4): Promise<Project[]> {
   );
 }
 
+export async function getAllProjects(): Promise<Project[]> {
+  // Update the GROQ query to limit results and start from a specific index
+  return createClient(clientConfig).fetch(
+    groq`*[_type == 'project'] | order(_createdAt desc){
+        _id,
+        _createdAt,
+        name,
+        "slug": slug.current,
+        "image": image.asset->url,
+        url,
+        content
+    }`
+  );
+}
+
 export async function getProject(slug: string): Promise<Project> {
   // const client = createClient({
   //   projectId: "zm1bbp7g",

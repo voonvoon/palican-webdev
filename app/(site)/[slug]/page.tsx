@@ -37,7 +37,7 @@ export default async function Page({ params }: Props) {
   return (
     <div className="p-8">
       <h1 className="text-3xl text-gray-700 font-extrabold drop-shadow">
-        {page.title}
+        {page?.title}
       </h1>
 
       {params.slug === "about" && (
@@ -66,7 +66,7 @@ export default async function Page({ params }: Props) {
       )}
 
       <div className="text-sm text-gray-700 mt-10">
-        <PortableText value={page.content} />
+        <PortableText value={page?.content} />
       </div>
 
       <ContactForm />
