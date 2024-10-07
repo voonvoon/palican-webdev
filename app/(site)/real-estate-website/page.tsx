@@ -252,10 +252,11 @@ const RealEstateListing: React.FC = () => {
                   <span className="text-gray-700 text-xs cursor-pointer flex items-center justify-center w-4 h-4 border-2 border-gray-700 rounded-full hover:bg-gray-300 transition duration-200">
                     ?
                   </span>
-                  <div className="absolute left-0 top-full mt-1 opacity-0 group-hover:opacity-100 bg-gray-700 text-white font-light text-xs rounded-md p-2 z-10 w-52">
+                  {/* Tooltip */}
+                  <div className="absolute left-4 top-full -translate-y-1/2 mt-1 opacity-0 group-hover:opacity-100 bg-gray-700 text-white font-light text-xs rounded-md p-2 z-10 w-52 transition-opacity duration-200">
                     <ul className="list-disc list-inside">
                       <li>Keyword Research and Optimization</li>
-                      <li>Goolge Search Console submission</li>
+                      <li>Google Search Console submission</li>
                       <li>Sitemap creation and submission</li>
                       <li>Title Tags and Meta Descriptions</li>
                       <li>Header Tags (H1, H2, H3)</li>
@@ -288,6 +289,7 @@ const RealEstateListing: React.FC = () => {
                 )}
               </td>
             </tr>
+
             <tr>
               <td className="py-1 px-2 sm:py-2 sm:px-4 border border-gray-200 text-sm sm:text-base">
                 Whatsapp Contact
@@ -363,8 +365,21 @@ const RealEstateListing: React.FC = () => {
             </tr>
           </tbody>
         </table>
+
         <button
-          className="w-full mb-4 p-8 py-3 mt-5 bg-gray-500 text-white font-semibold shadow-lg hover:bg-gray-600 transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gray-300"
+          className="w-full mb-4 p-8 py-3  mt-4 bg-green-500 text-white font-semibold shadow-lg hover:bg-green-600 transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gray-300"
+          onClick={() =>
+            window.open(
+              "https://www.fiverr.com/voon220/do-react-property-agent-and-listing-management-website",
+              "_blank"
+            )
+          }
+        >
+          Buy On Fiverr
+        </button>
+
+        <button
+          className="w-full mb-4 p-8 py-3 bg-gray-500 text-white font-semibold shadow-lg hover:bg-gray-600 transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gray-300"
           onClick={() =>
             window.open(
               "https://wa.me/60183795728?text=Hello,%20I%20am%20interested%20in%20your%20services!",
@@ -372,7 +387,7 @@ const RealEstateListing: React.FC = () => {
             )
           }
         >
-          Contact
+          Contact Us
         </button>
       </div>
       <Image
