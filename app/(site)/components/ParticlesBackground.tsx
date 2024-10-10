@@ -34,6 +34,8 @@ const ParticlesBackground = () => {
         top: 0,
         left: 0,
         zIndex: -5, // Set negative z-index
+        opacity: 0, //solve initial shape distorted
+        animation: "fadeIn 20s forwards",  //solve initial shape distorted
       }}
       options={{
         background: {
@@ -94,7 +96,7 @@ const ParticlesBackground = () => {
             outModes: {
               default: "bounce",
             },
-            random: true, // Random movement for a dynamic effect
+            random: false, // Random movement for a dynamic effect
             speed: 1, // Slow down the speed slightly
             straight: false,
           },
@@ -112,7 +114,7 @@ const ParticlesBackground = () => {
             type: ["circle", "triangle", "star"], // Add different shapes
           },
           size: {
-            value: { min: 2, max: 6 }, // Increase size range
+            value: { min: 4, max: 5 }, // Increase size range
           },
         },
         detectRetina: true,

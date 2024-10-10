@@ -2,28 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  .animate-fadeIn {
-    animation: fadeIn 4s ease-out forwards;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
+}
 
-  /* hide scroll bar */
+.animate-fadeIn {
+  animation: fadeIn 4s ease-out forwards;
+}
 
-  /* Custom class to hide scrollbars */
+/* hide scroll bar */
+
+/* Custom class to hide scrollbars */
 /* Custom class for a modern, slick scrollbar */
-
 
 /* Chrome, Safari, Edge */
 .custom-scrollbar::-webkit-scrollbar {
@@ -48,14 +45,13 @@
   border-radius: 4px; /* Roundness of the track */
 }
 
-
 html {
   scroll-behavior: smooth;
 }
 
 /* header animation */
 
- /* @keyframes bounce {
+/* @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
     transform: translateY(0);
   }
@@ -68,23 +64,26 @@ html {
 } */
 
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0) rotate(0deg); /* No rotation at start */
   }
   40% {
-    transform: translateY(-6px) rotate(10deg); /* Lower bounce with slight rotation */
+    transform: translateY(-1px) rotate(5deg); /* Lower bounce with slight rotation */
   }
   60% {
-    transform: translateY(-5px) rotate(-8deg); /* Lower bounce with opposite rotation */
+    transform: translateY(-2px) rotate(-3deg); /* Lower bounce with opposite rotation */
   }
   70% {
-    transform: translateY(-3px) rotate(6deg); /* Smaller bounce and rotation */
+    transform: translateY(2px) rotate(3deg); /* Smaller bounce and rotation */
   }
   90% {
-    transform: translateY(-1px) rotate(-4deg); /* Minimal bounce and rotation */
+    transform: translateY(1px) rotate(-3deg); /* Minimal bounce and rotation */
   }
 }
-
 
 @keyframes gradientShift {
   0% {
@@ -99,7 +98,9 @@ html {
 }
 
 .logo-animation {
-  animation: bounce 3s infinite, gradientShift 3s ease-in-out infinite; /* Slowed down the bounce */
+  animation:
+    bounce 3s infinite,
+    gradientShift 3s ease-in-out infinite; /* Slowed down the bounce */
   background: linear-gradient(45deg, #f97316, #f43f5e, #6d28d9);
   background-size: 400% 400%;
   color: transparent;
@@ -108,5 +109,12 @@ html {
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
+/* particles :solve initial shape distorted*/
 
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
 
+/* End of particles */

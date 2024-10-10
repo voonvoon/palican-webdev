@@ -2,10 +2,34 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 
 const SEO = () => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    triggerOnce: true, // Trigger the animation only once
+    threshold: 0.2, // Trigger when 20% of the component is visible
+  });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start({
+        opacity: 1,
+        scale: 1,
+        transition: { duration: 0.6, ease: "easeOut" },
+      });
+    }
+  }, [controls, inView]);
+
   return (
-    <div className=" shadow-lg flex flex-col md:flex-row items-center justify-around mt-28 mb-28  gap-x-4">
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, scale: 0.8 }} // Initial state (hidden and scaled down)
+      animate={controls}
+      className=" shadow-lg flex flex-col md:flex-row items-center justify-around mt-28 mb-28  gap-x-4"
+    >
       {/* Left Column: Image */}
       <div className="w-full md:w-1/2">
         <Image
@@ -37,7 +61,7 @@ const SEO = () => {
           </Link>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

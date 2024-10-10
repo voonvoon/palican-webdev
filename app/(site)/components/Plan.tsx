@@ -24,89 +24,85 @@ type PlanType = {
 const Plan = () => {
   const plans: PlanType[] = [
     {
+      title: "E-commerce",
+      description:
+        "SMEs, Corporate and Other Company plan to create an E-commerce",
+      features: [
+        { text: "No Monthly Subscription fee!" },
+        { text: "Full E-commerce Website" },
+        { text: "Unlimited Products" },
+        { text: "Payment Gateway" },
+        { text: "Fully Own Source Code" },
+        { text: "Social Media Integration" },
+        { text: "Live Chat Whatsapp Integration" },
+        { text: "Authentication (User Login e.g., Google)" },
+        { text: "Automated Email" },
+        { text: "SEO Friendly" },
+        { text: "Cloud-based Database (MongoDB)" },
+        { text: "Admin Dashboard" },
+        { text: "Products CRM System" },
+        { text: "Order Management System" },
+        { text: "Domain & Hosting & SSL setup" },
+        { text: "Mobile Responsive" },
+        { text: "Image Optimization (Cloudinary)" },
+        { text: "Ultra-Speedy with Next.js" },
+        { text: "Similar Product Recommendation", highlight: true },
+        { text: "Coupon Discount System", highlight: true },
+        { text: "Auto Invoice generation", highlight: true },
+        {
+          text: "Product Filtering(categories/brand..)",
+          highlight: true,
+        },
+      ],
+      priceBefore: "RM50/hr",
+      price: "RM40/hr",
+      popular: true, // Mark the Premium plan as popular
+    },
+    {
       title: "Website",
       description: "For companies or individuals in need of a website",
       features: [
-        { text: "4 ~ 8 pages Website" },
+        { text: "multiple pages Website" },
         { text: "Fully Own Source Code" },
         { text: "Social Media Integration" },
         { text: "Live Chat Whatsapp Integration" },
         { text: "SEO Friendly" },
         { text: "Content Management System" },
-        { text: "Domain & Hosting & SSL (free 1 year)" },
+        { text: "Domain & Hosting & SSL setup" },
         { text: "Mobile Responsive" },
         { text: "Ultra-Speedy with Next.js" },
       ],
-      priceBefore: "45/hr",
+      priceBefore: "50/hr",
       price: "RM40/hr",
     },
-    {
-      title: "E-commerce",
-      description: "For Company plan to create an E-commerce",
-      features: [
-        { text: "No Monthly Subscription fee!" },
-        { text: "6 Pages Website" },
-        { text: "Full E-commerce Website" },
-        { text: "Unlimited Products" },
-        { text: "Payment Gateway" },
-        { text: "Fully Own Source Code" },
-        { text: "Social Media Integration" },
-        { text: "Live Chat Whatsapp Integration" },
-        { text: "Authentication (User Login e.g., Google)" },
-        { text: "Automated Email" },
-        { text: "SEO Friendly" },
-        { text: "Cloud-based Database (MongoDB)" },
-        { text: "Admin Dashboard" },
-        { text: "Products CRM System" },
-        { text: "Order Management System" },
-        { text: "Domain & Hosting & SSL (free 1 year)" },
-        { text: "Mobile Responsive" },
-        { text: "Image Optimization (Cloudinary)" },
-        { text: "Ultra-Speedy with Next.js" },
-      ],
-      priceBefore: "RM45/hr",
-      price: "RM40/hr",
-    },
-    {
-      title: "Advance E-commerce",
-      description:
-        "SMEs, Corporate and Other Company plan to create an E-commerce",
-      features: [
-        { text: "Similar Product Recommendation", highlight: true },
-        { text: "Coupon Discount System", highlight: true },
-        { text: "Auto Invoice generation", highlight: true },
-        { text: "12 Pages Website", highlight: true },
-        {
-          text: "Product Filtering(categories/brand..)",
-          highlight: true,
-        },
-        { text: "No Monthly Subscription fee!" },
-
-        { text: "Full E-commerce Website" },
-        { text: "Unlimited Products" },
-
-        { text: "Payment Gateway" },
-        { text: "Fully Own Source Code" },
-        { text: "Social Media Integration" },
-        { text: "Live Chat Whatsapp Integration" },
-        { text: "Authentication (User Login e.g., Google)" },
-        { text: "Automated Email" },
-
-        { text: "SEO Friendly" },
-        { text: "Cloud-based Database (MongoDB)" },
-        { text: "Admin Dashboard" },
-        { text: "Products CRM System" },
-
-        { text: "Order Management System" },
-        { text: "Domain & Hosting & SSL (free 1 year)" },
-        { text: "Mobile Responsive" },
-        { text: "Image Optimization (Cloudinary)" },
-        { text: "Ultra-Speedy with Next.js" },
-      ],
-      priceBefore: "RM45/hr",
-      price: "RM40/hr",
-      popular: true, // Mark the Premium plan as popular
-    },
+    // {
+    //   title: "E-commerce",
+    //   description: "For Company plan to create an E-commerce",
+    //   features: [
+    //     { text: "No Monthly Subscription fee!" },
+    //     { text: "6 Pages Website" },
+    //     { text: "Full E-commerce Website" },
+    //     { text: "Unlimited Products" },
+    //     { text: "Payment Gateway" },
+    //     { text: "Fully Own Source Code" },
+    //     { text: "Social Media Integration" },
+    //     { text: "Live Chat Whatsapp Integration" },
+    //     { text: "Authentication (User Login e.g., Google)" },
+    //     { text: "Automated Email" },
+    //     { text: "SEO Friendly" },
+    //     { text: "Cloud-based Database (MongoDB)" },
+    //     { text: "Admin Dashboard" },
+    //     { text: "Products CRM System" },
+    //     { text: "Order Management System" },
+    //     { text: "Domain & Hosting & SSL setup" },
+    //     { text: "Mobile Responsive" },
+    //     { text: "Image Optimization (Cloudinary)" },
+    //     { text: "Ultra-Speedy with Next.js" },
+    //   ],
+    //   priceBefore: "RM45/hr",
+    //   price: "RM40/hr",
+    // },
+    
     {
       title: "Custom Plan",
       description:
@@ -185,7 +181,7 @@ const Plan = () => {
                   )
                 }
               >
-                Contact
+              Inquire Now
               </button>
             </div>
           </SwiperSlide>

@@ -169,13 +169,16 @@ export default async function Home({
           id="my-services"
           className="mt-12 mb-6 font-bold text-gray-700 text-3xl text-center"
         >
-          Plans & Price
+          Services & Price
         </h2>
 
         <Plan />
 
-        <ImageSection />
-        <SEO />
+        <div className="flex gap-2 justify-center flex-col lg:flex-row">
+          <ImageSection />
+          <SEO />
+        </div>
+
         <About />
 
         <TechShowcase />
