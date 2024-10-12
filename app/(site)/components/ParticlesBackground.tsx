@@ -47,7 +47,7 @@ const ParticlesBackground = () => {
         interactivity: {
           events: {
             onClick: {
-              enable: true,
+              enable: false, // so it wont create more while click..
               mode: "push",
             },
             onHover: {
@@ -59,7 +59,7 @@ const ParticlesBackground = () => {
           },
           modes: {
             push: {
-              quantity: 5,
+              quantity: 1,
             },
             repulse: {
               distance: 200,

@@ -25,14 +25,14 @@ const ChatBox = () => {
 
   return (
     <div
-      className={`fixed bottom-10 right-0 m-4 z-10 transition-all duration-500 ${
+      className={`fixed bottom-2 right-0 m-4 z-10 transition-all duration-900 ${
         isOpen ? "h-48 w-80" : "h-12 w-40"
-      } bg-gray-800 text-white rounded-t-lg shadow-lg flex flex-col ${
+      } bg-gray-800 text-white rounded-lg shadow-lg flex flex-col ${
         isOpen ? "" : "cursor-pointer hover:scale-105 hover:shadow-xl"
       }`}
       onClick={() => !isOpen && setIsOpen(true)}
     >
-      <div className="flex items-center justify-between p-4 h-12 bg-gray-700 rounded-t-lg">
+      <div className="flex items-center justify-between p-4 h-12 bg-gray-700 rounded-lg ">
         <span className="w-full">
           {isOpen ? (
             <div className="flex items-center justify-between">
