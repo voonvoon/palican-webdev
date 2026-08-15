@@ -1,18 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url><loc>http://localhost:3000/portfolio</loc><lastmod>2026-08-15T06:50:04.628Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/privacy</loc><lastmod>2026-08-15T06:50:04.629Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/real-estate-website</loc><lastmod>2026-08-15T06:50:04.629Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/fiverr-portfolio</loc><lastmod>2026-08-15T06:50:04.629Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 <url><loc>http://localhost:3000</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
 <url><loc>http://localhost:3000/about</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
 <url><loc>http://localhost:3000/contact</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
 <url><loc>http://localhost:3000/blogs/the-raise-and-fall-of-physical-store</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
 <url><loc>http://localhost:3000/blogs/what-is-the-cost-to-create-ecommerce-in-malaysia</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+<url><loc>http://localhost:3000/blogs/what-we-can-do-to-improve-your-seo</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
 <url><loc>http://localhost:3000/blogs/why-next-js-react-js-node-js-mongodb-and-cloudinary-is-a-winning-tech-stack-for-e-commerce-websites</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+<url><loc>http://localhost:3000/blogs/how-much-are-website-maintenance-costs-in-malaysia</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
 <url><loc>http://localhost:3000/blogs/the-benefits-of-creating-an-e-commerce-website-from-scratch</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
 <url><loc>http://localhost:3000/blogs/every-business-need-an-ecommerce</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+<url><loc>http://localhost:3000/blogs/why-next-js-is-the-future-of-web-development-and-why-you-should-choose-it-over-wordpress</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
 <url><loc>http://localhost:3000/blogs/what-different-channel-to-create-an-ecommerce-webiste</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
 <url><loc>http://localhost:3000/projects/ultimate-eccom</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
 <url><loc>http://localhost:3000/projects/my-realty-bright</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+<url><loc>http://localhost:3000/projects/travel-website</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
 <url><loc>http://localhost:3000/projects/my-realty-dark</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
 <url><loc>http://localhost:3000/projects/my-realty</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+<url><loc>http://localhost:3000/projects/restaurant-western</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+<url><loc>http://localhost:3000/projects/clothes-store</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
 <url><loc>http://localhost:3000/projects/extinguishmart</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
 <url><loc>http://localhost:3000/projects/bean-collector</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+<url><loc>http://localhost:3000/projects/the-lonely-food-app</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
 </urlset>

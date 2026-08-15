@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { DM_Sans, Space_Grotesk } from "next/font/google";
 import "../globals.css";
 import Link from "next/link";
 import { getPages } from "@/sanity/sanity-utils";
@@ -12,7 +12,15 @@ import Image from "next/image";
 
 //import { localBusinessStructuredData } from "./strutureData/structuredData";
 
-const inter = Inter({ subsets: ["latin"] });
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-body",
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-display",
+});
 
 export const metadata: Metadata = {
   title: "Pelican Webdev | E-commerce Website Building & Design in Malaysia  ",
@@ -32,7 +40,10 @@ export default async function RootLayout({
   const pages = await getPages();
 
   return (
-    <html lang="en" className="h-full">
+    <html
+      lang="en"
+      className={`h-full ${dmSans.variable} ${spaceGrotesk.variable}`}
+    >
       {/* JSON-LD for LocalBusiness */}
       {/* if put inside <Head> won't work! */}
       {/* <script
@@ -111,7 +122,7 @@ export default async function RootLayout({
             {/* Adjust text size using text-[8px] for very small text */}
           </Link>
 
-          <div className="flex items-center gap-3 text-sm text-gray-600 p-1 mr-1 sm:text-base">
+          <div className="flex items-center gap-3 text-xs text-gray-600 p-1 mr-1 sm:text-sm">
             {pages.map((page) => (
               <Link
                 href={`/${page.slug}`}

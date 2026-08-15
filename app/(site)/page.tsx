@@ -165,7 +165,13 @@ export default async function Home({
           hasNextPage={hasNextPage}
         />
 
-        <h2
+       
+
+       
+
+        <About />
+
+         <h2
           id="my-services"
           className="mt-12 mb-6 font-bold text-gray-700 text-3xl text-center"
         >
@@ -174,14 +180,11 @@ export default async function Home({
 
         <Plan />
 
-        <div className="flex gap-2 justify-center flex-col lg:flex-row">
+        <TechShowcase />
+         <div className="flex gap-2 justify-center flex-col">
           <ImageSection />
           <SEO />
         </div>
-
-        <About />
-
-        <TechShowcase />
         <h2 className="mt-12 font-bold text-gray-700 text-3xl text-center">
           My Blogs
         </h2>
